@@ -2,7 +2,7 @@
   "name": "Wrapped Ether",
   "symbol": "WETH",
   "decimals": 18,
-  "description": "Wrapped Ether on MegaETH",
+  "description": "Wrapped Ether on MegaETH", 
   "tokens": {
     "ethereum": {
       "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
