@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install gitleaks
+      - name: Install Gitleaks
         run: |
           git clone https://github.com/gitleaks/gitleaks.git
           cd gitleaks
@@ -41,7 +41,6 @@ jobs:
 
   dependency-check:
     runs-on: ubuntu-latest
-    
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
