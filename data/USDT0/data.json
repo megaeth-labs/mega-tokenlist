@@ -4,13 +4,8 @@
   "decimals": 6,
   "description": "Tether Stablecoin on MegaETH",
   "tokens": {
-    "ethereum": {
-      "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      "bridge": "0x6C96dE32CEa08842dcc4058c14d3aaAD7Fa41dee"
-    },
     "megaeth": {
-      "address": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
-      "bridge": "0x9151434b16b9763660705744891fA906F660EcC5"
+      "address": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb"
     }
   }
 }
