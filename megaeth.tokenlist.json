@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-01-07T03:08:39.907Z",
+  "timestamp": "2026-01-14T02:21:56.293Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -17,6 +17,17 @@
         "isNative": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ETH/logo.svg"
+    },
+    {
+      "chainId": 1,
+      "address": "0xEc2AF1C8B110a61fD9C3Fa6a554a031Ca9943926",
+      "name": "MegaUSD",
+      "symbol": "USDM",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDM/logo.png"
     },
     {
       "chainId": 1,
@@ -39,6 +50,17 @@
         "isNative": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ETH/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0xFAfDdbb3FC7688494971a79cc65DCa3EF82079E7",
+      "name": "MegaUSD",
+      "symbol": "USDM",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDM/logo.png"
     },
     {
       "chainId": 4326,
