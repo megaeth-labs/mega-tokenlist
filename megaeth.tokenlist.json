@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-01-16T16:10:31.371Z",
+  "timestamp": "2026-01-16T16:30:25.614Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -28,6 +28,19 @@
         "isNative": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ETH/logo.svg"
+    },
+    {
+      "chainId": 1,
+      "address": "0x88887bE419578051FF9F4eb6C858A951921D8888",
+      "name": "Staked Cap USD",
+      "symbol": "STCUSD",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "bridgeAddress": "0x983AEAaA0d0426839158435C43725EA7F45d4137",
+        "bridgeType": "canonical"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/STCUSD/logo.png"
     },
     {
       "chainId": 1,
@@ -83,6 +96,17 @@
         "isNative": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ETH/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x88887bE419578051FF9F4eb6C858A951921D8888",
+      "name": "Staked Cap USD",
+      "symbol": "STCUSD",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/STCUSD/logo.png"
     },
     {
       "chainId": 4326,
