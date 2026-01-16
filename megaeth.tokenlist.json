@@ -1,12 +1,23 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-01-14T02:21:56.293Z",
+  "timestamp": "2026-01-15T23:46:35.969Z",
   "version": {
     "major": 1,
     "minor": 0,
     "patch": 0
   },
   "tokens": [
+    {
+      "chainId": 1,
+      "address": "0xcCcc62962d17b8914c62D74FfB843d73B2a3cccC",
+      "name": "Cap USD",
+      "symbol": "CUSD",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/CUSD/logo.svg"
+    },
     {
       "chainId": 1,
       "address": "0x0000000000000000000000000000000000000000",
@@ -39,6 +50,17 @@
         "isNative": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WETH/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0xcCcc62962d17b8914c62D74FfB843d73B2a3cccC",
+      "name": "Cap USD",
+      "symbol": "CUSD",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/CUSD/logo.svg"
     },
     {
       "chainId": 4326,
