@@ -1,0 +1,16 @@
+{
+  "name": "Wrapped liquid staked Ether 2.0",
+  "symbol": "wstETH",
+  "decimals": 18,
+  "description": "Wrapped liquid staked Ether 2.0",
+  "website": "https://lido.fi",
+  "tokens": {
+    "ethereum": {
+      "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0"
+    },
+    "megaeth": {
+      "address": "0x601aC63637933D88285A025C685AC4e9a92a98dA",
+      "bridge": "0x1ba9bE96A5c21dcdB9D22bEC3f00abCb6336fd65"
+    }
+  }
+}

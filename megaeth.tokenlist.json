@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-01-16T16:35:03.861Z",
+  "timestamp": "2026-01-21T20:41:12.475Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -65,6 +65,17 @@
         "isNative": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WETH/logo.svg"
+    },
+    {
+      "chainId": 1,
+      "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+      "name": "Wrapped liquid staked Ether 2.0",
+      "symbol": "wstETH",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/wstETH/logo.svg"
     },
     {
       "chainId": 4326,
@@ -142,6 +153,19 @@
         "isNative": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WETH/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x601aC63637933D88285A025C685AC4e9a92a98dA",
+      "name": "Wrapped liquid staked Ether 2.0",
+      "symbol": "wstETH",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "bridgeAddress": "0x1ba9bE96A5c21dcdB9D22bEC3f00abCb6336fd65",
+        "bridgeType": "canonical"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/wstETH/logo.svg"
     }
   ]
 }
