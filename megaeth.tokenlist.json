@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-01-16T16:35:03.861Z",
+  "timestamp": "2026-01-22T09:09:05.432Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -98,6 +98,17 @@
         "isNative": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ETH/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x28B7E77f82B25B95953825F1E3eA0E36c1c29861",
+      "name": "MEGA",
+      "symbol": "MEGA",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/MEGA/logo.svg"
     },
     {
       "chainId": 4326,
