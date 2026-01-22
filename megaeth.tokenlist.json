@@ -1,0 +1,158 @@
+{
+  "name": "MegaETH Token List",
+  "timestamp": "2026-01-22T09:09:05.432Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tokens": [
+    {
+      "chainId": 1,
+      "address": "0xcCcc62962d17b8914c62D74FfB843d73B2a3cccC",
+      "name": "Cap USD",
+      "symbol": "CUSD",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "bridgeAddress": "0xA62571EbdFfAbC3051a2e5B9e1f57b23D830c8Fd",
+        "bridgeType": "canonical"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/CUSD/logo.svg"
+    },
+    {
+      "chainId": 1,
+      "address": "0x0000000000000000000000000000000000000000",
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ETH/logo.svg"
+    },
+    {
+      "chainId": 1,
+      "address": "0x88887bE419578051FF9F4eb6C858A951921D8888",
+      "name": "Staked Cap USD",
+      "symbol": "STCUSD",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "bridgeAddress": "0x983AEAaA0d0426839158435C43725EA7F45d4137",
+        "bridgeType": "canonical"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/STCUSD/logo.png"
+    },
+    {
+      "chainId": 1,
+      "address": "0xEc2AF1C8B110a61fD9C3Fa6a554a031Ca9943926",
+      "name": "MegaUSD",
+      "symbol": "USDM",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDM/logo.png"
+    },
+    {
+      "chainId": 1,
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WETH/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0xB0F70C0bD6FD87dbEb7C10dC692a2a6106817072",
+      "name": "Bitcoin",
+      "symbol": "BTC.b",
+      "decimals": 8,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/BTC.b/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0xcCcc62962d17b8914c62D74FfB843d73B2a3cccC",
+      "name": "Cap USD",
+      "symbol": "CUSD",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/CUSD/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x0000000000000000000000000000000000000000",
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ETH/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x28B7E77f82B25B95953825F1E3eA0E36c1c29861",
+      "name": "MEGA",
+      "symbol": "MEGA",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/MEGA/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x88887bE419578051FF9F4eb6C858A951921D8888",
+      "name": "Staked Cap USD",
+      "symbol": "STCUSD",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/STCUSD/logo.png"
+    },
+    {
+      "chainId": 4326,
+      "address": "0xFAfDdbb3FC7688494971a79cc65DCa3EF82079E7",
+      "name": "MegaUSD",
+      "symbol": "USDM",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDM/logo.png"
+    },
+    {
+      "chainId": 4326,
+      "address": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+      "name": "USDT0",
+      "symbol": "USDT0",
+      "decimals": 6,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDT0/logo.png"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x4200000000000000000000000000000000000006",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WETH/logo.svg"
+    }
+  ]
+}
