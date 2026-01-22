@@ -5,7 +5,8 @@
   "description": "Renzo Restaked ETH on MegaETH",
   "tokens": {
     "ethereum": {
-      "address": "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110"
+      "address": "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
+      "bridge": "0xC8140dA31E6bCa19b287cC35531c2212763C2059"
     },
     "megaeth": {
       "address": "0x09601A65e7de7BC8A19813D263dD9E98bFdC3c57"
