@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-01-22T09:09:05.432Z",
+  "timestamp": "2026-01-23T02:08:35.181Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -33,6 +33,19 @@
     },
     {
       "chainId": 1,
+      "address": "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
+      "name": "Renzo Restaked ETH",
+      "symbol": "ezETH",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "bridgeAddress": "0xC8140dA31E6bCa19b287cC35531c2212763C2059",
+        "bridgeType": "canonical"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ezETH/logo.svg"
+    },
+    {
+      "chainId": 1,
       "address": "0x88887bE419578051FF9F4eb6C858A951921D8888",
       "name": "Staked Cap USD",
       "symbol": "STCUSD",
@@ -43,6 +56,30 @@
         "bridgeType": "canonical"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/STCUSD/logo.png"
+    },
+    {
+      "chainId": 1,
+      "address": "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
+      "name": "Staked USDe",
+      "symbol": "sUSDe",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "bridgeAddress": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+        "bridgeType": "canonical"
+      }
+    },
+    {
+      "chainId": 1,
+      "address": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+      "name": "USDe",
+      "symbol": "USDe",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "bridgeAddress": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+        "bridgeType": "canonical"
+      }
     },
     {
       "chainId": 1,
@@ -101,6 +138,17 @@
     },
     {
       "chainId": 4326,
+      "address": "0x09601A65e7de7BC8A19813D263dD9E98bFdC3c57",
+      "name": "Renzo Restaked ETH",
+      "symbol": "ezETH",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ezETH/logo.svg"
+    },
+    {
+      "chainId": 4326,
       "address": "0x28B7E77f82B25B95953825F1E3eA0E36c1c29861",
       "name": "MEGA",
       "symbol": "MEGA",
@@ -120,6 +168,26 @@
         "isNative": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/STCUSD/logo.png"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+      "name": "Staked USDe",
+      "symbol": "sUSDe",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      }
+    },
+    {
+      "chainId": 4326,
+      "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+      "name": "USDe",
+      "symbol": "USDe",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      }
     },
     {
       "chainId": 4326,
