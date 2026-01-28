@@ -1,0 +1,11 @@
+{
+  "name": "rsETHWrapper",
+  "symbol": "wrsETH",
+  "decimals": 18,
+  "description": "Kelp wrsETH on MegaETH",
+  "tokens": {
+    "megaeth": {
+      "address": "0x4Fc44BE15e9B6E30C1E774E2C87A21D3E8b5403F"
+    }
+  }
+}
