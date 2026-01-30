@@ -5,7 +5,9 @@
   "description": "Tether Stablecoin on MegaETH",
   "tokens": {
     "megaeth": {
-      "address": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb"
+      "address": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+      "isNative": false,
+      "isOFT": true
     }
   }
 }

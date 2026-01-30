@@ -8,6 +8,12 @@ const OUTPUT_FILE = path.join(__dirname, '..', 'megaeth.tokenlist.json')
 const LOGO_BASE_URL =
   'https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data'
 
+const CANONICAL_BRIDGES = new Set([
+  '0x4200000000000000000000000000000000000010',
+  '0x0CA3A2FBC3D770b578223FBB6b062fa875a2eE75',
+  '0x7f82f57F0Dd546519324392e408b01fcC7D709e8',
+])
+
 function getLogoExtension(tokenDir: string): string | null {
   const svgPath = path.join(tokenDir, 'logo.svg')
   const pngPath = path.join(tokenDir, 'logo.png')
@@ -55,11 +61,17 @@ export function generate(): TokenList {
         decimals: tokenData.decimals,
         extensions: chainToken.bridge
           ? {
-              isNative: false,
+              isNative: chainToken.isNative ?? 'unknown',
+              isOFT: chainToken.isOFT ?? 'unknown',
               bridgeAddress: chainToken.bridge,
-              bridgeType: 'canonical' as const,
+              bridgeType: CANONICAL_BRIDGES.has(chainToken.bridge)
+                ? 'canonical'
+                : 'others',
             }
-          : { isNative: true },
+          : {
+              isNative: chainToken.isNative ?? 'unknown',
+              isOFT: chainToken.isOFT ?? 'unknown',
+            },
       }
 
       if (logoExt) {
