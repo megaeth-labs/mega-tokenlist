@@ -4,7 +4,9 @@
   "decimals": 8,
   "tokens": {
     "megaeth": {
-      "address": "0xB0F70C0bD6FD87dbEb7C10dC692a2a6106817072"
+      "address": "0xB0F70C0bD6FD87dbEb7C10dC692a2a6106817072",
+      "isNative": false,
+      "isOFT": false
     }
   }
 }
