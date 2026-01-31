@@ -6,10 +6,14 @@
   "tokens": {
     "ethereum": {
       "address": "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
-      "bridge": "0x85d456B2DfF1fd8245387C0BfB64Dfb700e98Ef3"
+      "bridge": "0x85d456B2DfF1fd8245387C0BfB64Dfb700e98Ef3",
+      "isNative": false,
+      "isOFT": true
     },
     "megaeth": {
-      "address": "0xc3eACf0612346366Db554C991D7858716db09f58"
+      "address": "0xc3eACf0612346366Db554C991D7858716db09f58",
+      "isNative": false,
+      "isOFT": true
     }
   }
 }

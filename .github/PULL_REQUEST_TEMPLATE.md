@@ -16,7 +16,8 @@
 
 ### Bridge Information (if applicable)
 
-- [ ] This is a **native** token (no bridge)
+- [ ] This is a **native** token
+- [ ] This is a **OFT** token (LayerZero Omnichain Fungible Token)
 - [ ] This is a **bridged** token
   - Bridge Address: `0x...`
 

@@ -4,6 +4,8 @@ import type { Chain } from './chains'
 export interface Token {
   address: string
   bridge?: string // Bridge address if token is bridged (not native)
+  isNative?: boolean // True if token is native to the chain
+  isOFT?: boolean // True if token is OFT (LayerZero Omnichain Fungible Token)
 }
 
 // Token data.json schema
@@ -18,9 +20,10 @@ export interface TokenData {
 
 // Token extensions for native/bridged status
 export interface TokenExtensions {
-  isNative: boolean
+  isNative: boolean | 'unknown'
+  isOFT: boolean | 'unknown'
   bridgeAddress?: string
-  bridgeType?: 'canonical'
+  bridgeType?: 'canonical' | 'others'
 }
 
 // Uniswap TokenList standard types
