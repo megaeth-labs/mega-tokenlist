@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-01-30T02:22:29.124Z",
+  "timestamp": "2026-01-31T01:51:29.403Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -15,8 +15,9 @@
       "decimals": 18,
       "extensions": {
         "isNative": false,
+        "isOFT": true,
         "bridgeAddress": "0xA62571EbdFfAbC3051a2e5B9e1f57b23D830c8Fd",
-        "bridgeType": "canonical"
+        "bridgeType": "others"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/CUSD/logo.svg"
     },
@@ -27,7 +28,10 @@
       "symbol": "ETH",
       "decimals": 18,
       "extensions": {
-        "isNative": true
+        "isNative": true,
+        "isOFT": false,
+        "bridgeAddress": "0x0CA3A2FBC3D770b578223FBB6b062fa875a2eE75",
+        "bridgeType": "canonical"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ETH/logo.svg"
     },
@@ -39,8 +43,9 @@
       "decimals": 18,
       "extensions": {
         "isNative": false,
+        "isOFT": false,
         "bridgeAddress": "0xC8140dA31E6bCa19b287cC35531c2212763C2059",
-        "bridgeType": "canonical"
+        "bridgeType": "others"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ezETH/logo.svg"
     },
@@ -52,8 +57,9 @@
       "decimals": 18,
       "extensions": {
         "isNative": false,
+        "isOFT": true,
         "bridgeAddress": "0x85d456B2DfF1fd8245387C0BfB64Dfb700e98Ef3",
-        "bridgeType": "canonical"
+        "bridgeType": "others"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/rsETH/logo.svg"
     },
@@ -65,8 +71,9 @@
       "decimals": 18,
       "extensions": {
         "isNative": false,
+        "isOFT": true,
         "bridgeAddress": "0x983AEAaA0d0426839158435C43725EA7F45d4137",
-        "bridgeType": "canonical"
+        "bridgeType": "others"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/STCUSD/logo.png"
     },
@@ -78,9 +85,11 @@
       "decimals": 18,
       "extensions": {
         "isNative": false,
+        "isOFT": true,
         "bridgeAddress": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
-        "bridgeType": "canonical"
-      }
+        "bridgeType": "others"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/SUSDE/logo.svg"
     },
     {
       "chainId": 1,
@@ -90,9 +99,11 @@
       "decimals": 18,
       "extensions": {
         "isNative": false,
+        "isOFT": true,
         "bridgeAddress": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
-        "bridgeType": "canonical"
-      }
+        "bridgeType": "others"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDE/logo.svg"
     },
     {
       "chainId": 1,
@@ -101,7 +112,8 @@
       "symbol": "USDM",
       "decimals": 18,
       "extensions": {
-        "isNative": true
+        "isNative": false,
+        "isOFT": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDM/logo.png"
     },
@@ -112,7 +124,8 @@
       "symbol": "WETH",
       "decimals": 18,
       "extensions": {
-        "isNative": true
+        "isNative": true,
+        "isOFT": false
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WETH/logo.svg"
     },
@@ -123,7 +136,8 @@
       "symbol": "wstETH",
       "decimals": 18,
       "extensions": {
-        "isNative": true
+        "isNative": false,
+        "isOFT": false
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/wstETH/logo.svg"
     },
@@ -134,7 +148,8 @@
       "symbol": "BTC.b",
       "decimals": 8,
       "extensions": {
-        "isNative": true
+        "isNative": false,
+        "isOFT": false
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/BTC.b/logo.svg"
     },
@@ -145,7 +160,8 @@
       "symbol": "CUSD",
       "decimals": 18,
       "extensions": {
-        "isNative": true
+        "isNative": false,
+        "isOFT": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/CUSD/logo.svg"
     },
@@ -156,7 +172,10 @@
       "symbol": "ETH",
       "decimals": 18,
       "extensions": {
-        "isNative": true
+        "isNative": true,
+        "isOFT": false,
+        "bridgeAddress": "0x4200000000000000000000000000000000000010",
+        "bridgeType": "canonical"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ETH/logo.svg"
     },
@@ -167,7 +186,8 @@
       "symbol": "ezETH",
       "decimals": 18,
       "extensions": {
-        "isNative": true
+        "isNative": false,
+        "isOFT": false
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ezETH/logo.svg"
     },
@@ -178,7 +198,8 @@
       "symbol": "MEGA",
       "decimals": 18,
       "extensions": {
-        "isNative": true
+        "isNative": true,
+        "isOFT": false
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/MEGA/logo.svg"
     },
@@ -189,7 +210,8 @@
       "symbol": "rsETH",
       "decimals": 18,
       "extensions": {
-        "isNative": true
+        "isNative": false,
+        "isOFT": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/rsETH/logo.svg"
     },
@@ -200,7 +222,8 @@
       "symbol": "STCUSD",
       "decimals": 18,
       "extensions": {
-        "isNative": true
+        "isNative": false,
+        "isOFT": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/STCUSD/logo.png"
     },
@@ -211,8 +234,10 @@
       "symbol": "sUSDe",
       "decimals": 18,
       "extensions": {
-        "isNative": true
-      }
+        "isNative": false,
+        "isOFT": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/SUSDE/logo.svg"
     },
     {
       "chainId": 4326,
@@ -221,8 +246,10 @@
       "symbol": "USDe",
       "decimals": 18,
       "extensions": {
-        "isNative": true
-      }
+        "isNative": false,
+        "isOFT": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDE/logo.svg"
     },
     {
       "chainId": 4326,
@@ -231,7 +258,8 @@
       "symbol": "USDM",
       "decimals": 18,
       "extensions": {
-        "isNative": true
+        "isNative": false,
+        "isOFT": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDM/logo.png"
     },
@@ -242,7 +270,8 @@
       "symbol": "USDT0",
       "decimals": 6,
       "extensions": {
-        "isNative": true
+        "isNative": false,
+        "isOFT": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDT0/logo.png"
     },
@@ -253,7 +282,8 @@
       "symbol": "WETH",
       "decimals": 18,
       "extensions": {
-        "isNative": true
+        "isNative": true,
+        "isOFT": false
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WETH/logo.svg"
     },
@@ -264,7 +294,8 @@
       "symbol": "wrsETH",
       "decimals": 18,
       "extensions": {
-        "isNative": true
+        "isNative": "unknown",
+        "isOFT": "unknown"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/wrsETH/logo.svg"
     },
@@ -276,8 +307,9 @@
       "decimals": 18,
       "extensions": {
         "isNative": false,
+        "isOFT": false,
         "bridgeAddress": "0x1ba9bE96A5c21dcdB9D22bEC3f00abCb6336fd65",
-        "bridgeType": "canonical"
+        "bridgeType": "others"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/wstETH/logo.svg"
     }
