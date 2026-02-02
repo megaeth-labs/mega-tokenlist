@@ -1,0 +1,16 @@
+{
+  "name": "Wrapped Bitcoin",
+  "symbol": "WBTC",
+  "decimals": 8,
+  "description": "Wrapped Bitcoin bridged from Ethereum via Wormhole",
+  "tokens": {
+    "ethereum": {
+      "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "isNative": true
+    },
+    "megaeth": {
+      "address": "0x32090fB1399a31cC095e6341a6353b7c09ba84FB",
+      "isNative": false
+    }
+  }
+}

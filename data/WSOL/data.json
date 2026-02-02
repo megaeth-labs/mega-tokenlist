@@ -1,0 +1,12 @@
+{
+  "name": "Wrapped SOL",
+  "symbol": "WSOL",
+  "decimals": 9,
+  "description": "Wrapped SOL bridged from Solana via Wormhole",
+  "tokens": {
+    "megaeth": {
+      "address": "0x9a96E366F6b2ED5850A38B58D355a80aFD998411",
+      "isNative": false
+    }
+  }
+}
