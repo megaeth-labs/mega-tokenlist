@@ -8,6 +8,18 @@
   },
   "tokens": [
     {
+      "chainId": 4326,
+      "address": "0xB0F70C0bD6FD87dbEb7C10dC692a2a6106817072",
+      "name": "Bitcoin",
+      "symbol": "BTC.b",
+      "decimals": 8,
+      "extensions": {
+        "isNative": false,
+        "isOFT": false
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/BTC.b/logo.svg"
+    },
+    {
       "chainId": 1,
       "address": "0xcCcc62962d17b8914c62D74FfB843d73B2a3cccC",
       "name": "Cap USD",
@@ -18,6 +30,18 @@
         "isOFT": true,
         "bridgeAddress": "0xA62571EbdFfAbC3051a2e5B9e1f57b23D830c8Fd",
         "bridgeType": "others"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/CUSD/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0xcCcc62962d17b8914c62D74FfB843d73B2a3cccC",
+      "name": "Cap USD",
+      "symbol": "CUSD",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "isOFT": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/CUSD/logo.svg"
     },
@@ -36,32 +60,30 @@
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ETH/logo.svg"
     },
     {
-      "chainId": 1,
-      "address": "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
-      "name": "Renzo Restaked ETH",
-      "symbol": "ezETH",
+      "chainId": 4326,
+      "address": "0x0000000000000000000000000000000000000000",
+      "name": "Ether",
+      "symbol": "ETH",
       "decimals": 18,
       "extensions": {
-        "isNative": false,
+        "isNative": true,
         "isOFT": false,
-        "bridgeAddress": "0xC8140dA31E6bCa19b287cC35531c2212763C2059",
-        "bridgeType": "others"
+        "bridgeAddress": "0x4200000000000000000000000000000000000010",
+        "bridgeType": "canonical"
       },
-      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ezETH/logo.svg"
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ETH/logo.svg"
     },
     {
-      "chainId": 1,
-      "address": "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
-      "name": "KelpDao Restaked ETH",
-      "symbol": "rsETH",
+      "chainId": 4326,
+      "address": "0x28B7E77f82B25B95953825F1E3eA0E36c1c29861",
+      "name": "MEGA",
+      "symbol": "MEGA",
       "decimals": 18,
       "extensions": {
-        "isNative": false,
-        "isOFT": true,
-        "bridgeAddress": "0x85d456B2DfF1fd8245387C0BfB64Dfb700e98Ef3",
-        "bridgeType": "others"
+        "isNative": true,
+        "isOFT": false
       },
-      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/rsETH/logo.svg"
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/MEGA/logo.svg"
     },
     {
       "chainId": 1,
@@ -78,144 +100,6 @@
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/STCUSD/logo.png"
     },
     {
-      "chainId": 1,
-      "address": "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
-      "name": "Staked USDe",
-      "symbol": "sUSDe",
-      "decimals": 18,
-      "extensions": {
-        "isNative": false,
-        "isOFT": true,
-        "bridgeAddress": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
-        "bridgeType": "others"
-      },
-      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/SUSDE/logo.svg"
-    },
-    {
-      "chainId": 1,
-      "address": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
-      "name": "USDe",
-      "symbol": "USDe",
-      "decimals": 18,
-      "extensions": {
-        "isNative": false,
-        "isOFT": true,
-        "bridgeAddress": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
-        "bridgeType": "others"
-      },
-      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDE/logo.svg"
-    },
-    {
-      "chainId": 1,
-      "address": "0xEc2AF1C8B110a61fD9C3Fa6a554a031Ca9943926",
-      "name": "MegaUSD",
-      "symbol": "USDM",
-      "decimals": 18,
-      "extensions": {
-        "isNative": false,
-        "isOFT": true
-      },
-      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDM/logo.png"
-    },
-    {
-      "chainId": 1,
-      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-      "name": "Wrapped Ether",
-      "symbol": "WETH",
-      "decimals": 18,
-      "extensions": {
-        "isNative": true,
-        "isOFT": false
-      },
-      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WETH/logo.svg"
-    },
-    {
-      "chainId": 1,
-      "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-      "name": "Wrapped liquid staked Ether 2.0",
-      "symbol": "wstETH",
-      "decimals": 18,
-      "extensions": {
-        "isNative": false,
-        "isOFT": false
-      },
-      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/wstETH/logo.svg"
-    },
-    {
-      "chainId": 4326,
-      "address": "0xB0F70C0bD6FD87dbEb7C10dC692a2a6106817072",
-      "name": "Bitcoin",
-      "symbol": "BTC.b",
-      "decimals": 8,
-      "extensions": {
-        "isNative": false,
-        "isOFT": false
-      },
-      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/BTC.b/logo.svg"
-    },
-    {
-      "chainId": 4326,
-      "address": "0xcCcc62962d17b8914c62D74FfB843d73B2a3cccC",
-      "name": "Cap USD",
-      "symbol": "CUSD",
-      "decimals": 18,
-      "extensions": {
-        "isNative": false,
-        "isOFT": true
-      },
-      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/CUSD/logo.svg"
-    },
-    {
-      "chainId": 4326,
-      "address": "0x0000000000000000000000000000000000000000",
-      "name": "Ether",
-      "symbol": "ETH",
-      "decimals": 18,
-      "extensions": {
-        "isNative": true,
-        "isOFT": false,
-        "bridgeAddress": "0x4200000000000000000000000000000000000010",
-        "bridgeType": "canonical"
-      },
-      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ETH/logo.svg"
-    },
-    {
-      "chainId": 4326,
-      "address": "0x09601A65e7de7BC8A19813D263dD9E98bFdC3c57",
-      "name": "Renzo Restaked ETH",
-      "symbol": "ezETH",
-      "decimals": 18,
-      "extensions": {
-        "isNative": false,
-        "isOFT": false
-      },
-      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ezETH/logo.svg"
-    },
-    {
-      "chainId": 4326,
-      "address": "0x28B7E77f82B25B95953825F1E3eA0E36c1c29861",
-      "name": "MEGA",
-      "symbol": "MEGA",
-      "decimals": 18,
-      "extensions": {
-        "isNative": true,
-        "isOFT": false
-      },
-      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/MEGA/logo.svg"
-    },
-    {
-      "chainId": 4326,
-      "address": "0xc3eACf0612346366Db554C991D7858716db09f58",
-      "name": "KelpDao Restaked ETH",
-      "symbol": "rsETH",
-      "decimals": 18,
-      "extensions": {
-        "isNative": false,
-        "isOFT": true
-      },
-      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/rsETH/logo.svg"
-    },
-    {
       "chainId": 4326,
       "address": "0x88887bE419578051FF9F4eb6C858A951921D8888",
       "name": "Staked Cap USD",
@@ -228,28 +112,16 @@
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/STCUSD/logo.png"
     },
     {
-      "chainId": 4326,
-      "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
-      "name": "Staked USDe",
-      "symbol": "sUSDe",
+      "chainId": 1,
+      "address": "0xEc2AF1C8B110a61fD9C3Fa6a554a031Ca9943926",
+      "name": "MegaUSD",
+      "symbol": "USDM",
       "decimals": 18,
       "extensions": {
         "isNative": false,
         "isOFT": true
       },
-      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/SUSDE/logo.svg"
-    },
-    {
-      "chainId": 4326,
-      "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
-      "name": "USDe",
-      "symbol": "USDe",
-      "decimals": 18,
-      "extensions": {
-        "isNative": false,
-        "isOFT": true
-      },
-      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDE/logo.svg"
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDM/logo.png"
     },
     {
       "chainId": 4326,
@@ -276,6 +148,44 @@
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDT0/logo.png"
     },
     {
+      "chainId": 1,
+      "address": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+      "name": "USDe",
+      "symbol": "USDe",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "isOFT": true,
+        "bridgeAddress": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+        "bridgeType": "others"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDE/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+      "name": "USDe",
+      "symbol": "USDe",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "isOFT": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDE/logo.svg"
+    },
+    {
+      "chainId": 1,
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true,
+        "isOFT": false
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WETH/logo.svg"
+    },
+    {
       "chainId": 4326,
       "address": "0x4200000000000000000000000000000000000006",
       "name": "Wrapped Ether",
@@ -289,6 +199,96 @@
     },
     {
       "chainId": 4326,
+      "address": "0x9a96E366F6b2ED5850A38B58D355a80aFD998411",
+      "name": "Wrapped SOL",
+      "symbol": "WSOL",
+      "decimals": 9,
+      "extensions": {
+        "isNative": false,
+        "isOFT": false
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WSOL/logo.svg"
+    },
+    {
+      "chainId": 1,
+      "address": "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
+      "name": "Renzo Restaked ETH",
+      "symbol": "ezETH",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "isOFT": false,
+        "bridgeAddress": "0xC8140dA31E6bCa19b287cC35531c2212763C2059",
+        "bridgeType": "others"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ezETH/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x09601A65e7de7BC8A19813D263dD9E98bFdC3c57",
+      "name": "Renzo Restaked ETH",
+      "symbol": "ezETH",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "isOFT": false
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ezETH/logo.svg"
+    },
+    {
+      "chainId": 1,
+      "address": "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+      "name": "KelpDao Restaked ETH",
+      "symbol": "rsETH",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "isOFT": true,
+        "bridgeAddress": "0x85d456B2DfF1fd8245387C0BfB64Dfb700e98Ef3",
+        "bridgeType": "others"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/rsETH/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0xc3eACf0612346366Db554C991D7858716db09f58",
+      "name": "KelpDao Restaked ETH",
+      "symbol": "rsETH",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "isOFT": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/rsETH/logo.svg"
+    },
+    {
+      "chainId": 1,
+      "address": "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
+      "name": "Staked USDe",
+      "symbol": "sUSDe",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "isOFT": true,
+        "bridgeAddress": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+        "bridgeType": "others"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/SUSDE/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+      "name": "Staked USDe",
+      "symbol": "sUSDe",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "isOFT": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/SUSDE/logo.svg"
+    },
+    {
+      "chainId": 4326,
       "address": "0x4Fc44BE15e9B6E30C1E774E2C87A21D3E8b5403F",
       "name": "rsETHWrapper",
       "symbol": "wrsETH",
@@ -298,6 +298,18 @@
         "isOFT": "unknown"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/wrsETH/logo.svg"
+    },
+    {
+      "chainId": 1,
+      "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+      "name": "Wrapped liquid staked Ether 2.0",
+      "symbol": "wstETH",
+      "decimals": 18,
+      "extensions": {
+        "isNative": false,
+        "isOFT": false
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/wstETH/logo.svg"
     },
     {
       "chainId": 4326,
