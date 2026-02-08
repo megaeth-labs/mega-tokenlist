@@ -58,12 +58,12 @@ describe('Token List Generation', () => {
     }
   });
 
-  test('native tokens have isNative: true', () => {
-    const nativeTokens = tokenList.tokens.filter((t) => t.extensions.isNative);
+  test('native tokens have isOrigin: true', () => {
+    const nativeTokens = tokenList.tokens.filter((t) => t.extensions.isOrigin);
     expect(nativeTokens.length).toBeGreaterThan(0);
 
     for (const token of nativeTokens) {
-      expect(token.extensions.isNative).toBe(true);
+      expect(token.extensions.isOrigin).toBe(true);
       expect(token.extensions.bridgeAddress).toBeUndefined();
       expect(token.extensions.bridgeType).toBeUndefined();
     }
@@ -91,6 +91,6 @@ describe('Token List Generation', () => {
     const wethTokens = tokenList.tokens.filter((t) => t.symbol === 'WETH');
     expect(wethTokens.length).toBe(1);
     expect(wethTokens[0].chainId).toBe(4326);
-    expect(wethTokens[0].extensions.isNative).toBe(true);
+    expect(wethTokens[0].extensions.isOrigin).toBe(true);
   });
 });
