@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-01-31T01:51:29.403Z",
+  "timestamp": "2026-02-08T02:31:21.422Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -202,6 +202,18 @@
         "isOFT": false
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/MEGA/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x9367A0c482703d8d9bda995B03f8E71056a72500",
+      "name": "Synthetics Implemented Right",
+      "symbol": "MegaSIR",
+      "decimals": 12,
+      "extensions": {
+        "isNative": true,
+        "isOFT": "unknown"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/MegaSIR/logo.svg"
     },
     {
       "chainId": 4326,
