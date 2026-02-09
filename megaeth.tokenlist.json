@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-02-08T02:31:21.422Z",
+  "timestamp": "2026-02-09T13:44:57.270Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -274,6 +274,18 @@
         "isOFT": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDM/logo.png"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x2eA493384F42d7Ea78564F3EF4C86986eAB4a890",
+      "name": "USDm Yield",
+      "symbol": "USDmY",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true,
+        "isOFT": "unknown"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDmY/logo.svg"
     },
     {
       "chainId": 4326,
