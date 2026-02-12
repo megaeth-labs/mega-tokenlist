@@ -1,0 +1,12 @@
+{
+  "name": "USDm Yield",
+  "symbol": "USDmY",
+  "decimals": 18,
+  "description": "Earn yield across the MegaETH ecosystem with MegaVault. Deposit USDm to access diversified onchain opportunities through dynamic allocation and real-time coordination powered by Avon.",
+  "tokens": {
+    "megaeth": {
+      "address": "0x2eA493384F42d7Ea78564F3EF4C86986eAB4a890",
+      "isNative": true
+    }
+  }
+}
