@@ -6,11 +6,11 @@ The generated tokenlist follows the [Uniswap Token List](https://github.com/Unis
 
 ## Supported Chains
 
-| Chain    | Chain ID | Type   | Description                              |
-| -------- | -------- | ------ | ---------------------------------------- |
-| Ethereum | 1        | L1     | Ethereum mainnet                         |
-| MegaETH  | 4326     | L2     | MegaETH mainnet                          |
-| Solana   | -        | Source | Non-EVM source chain for bridged assets  |
+| Chain    | Chain ID | Type   | Description                             |
+| -------- | -------- | ------ | --------------------------------------- |
+| Ethereum | 1        | L1     | Ethereum mainnet                        |
+| MegaETH  | 4326     | L2     | MegaETH mainnet                         |
+| Solana   | -        | Source | Non-EVM source chain for bridged assets |
 
 > **Note:** Only EVM chains (Ethereum, MegaETH) appear in the generated tokenlist. Non-EVM chains like Solana are tracked as source chains — their addresses appear in the `extensions` field.
 
@@ -43,22 +43,22 @@ The generated tokenlist follows the [Uniswap Token List](https://github.com/Unis
 
 Each chain entry in `tokens` supports:
 
-| Field       | Type    | Description                                           |
-| ----------- | ------- | ----------------------------------------------------- |
-| `address`   | string  | Token contract address (required)                     |
-| `isOrigin`  | boolean | `true` if token was originally created on this chain  |
-| `mechanism` | string  | How tokens move: `"native"` `"lock"` `"mint"` `"burn"` |
+| Field       | Type    | Description                                                      |
+| ----------- | ------- | ---------------------------------------------------------------- |
+| `address`   | string  | Token contract address (required)                                |
+| `isOrigin`  | boolean | `true` if token was originally created on this chain             |
+| `mechanism` | string  | How tokens move: `"native"` `"lock"` `"mint"` `"burn"`           |
 | `bridge`    | string  | Bridge contract address (lockbox if lock, endpoint if mint/burn) |
-| `isOFT`     | boolean | `true` if token is a LayerZero OFT                    |
+| `isOFT`     | boolean | `true` if token is a LayerZero OFT                               |
 
 ### Mechanism Types
 
-| Mechanism  | Description                                      | `bridge` field contains     |
-| ---------- | ------------------------------------------------ | --------------------------- |
-| `native`   | Token originated here, no bridge involved        | (not needed)                |
-| `lock`     | Tokens are locked here when bridging out         | Lockbox contract address    |
-| `mint`     | Tokens are minted here from another chain        | Mint/bridge endpoint        |
-| `burn`     | Tokens are burned here when bridging out         | Burn/bridge endpoint        |
+| Mechanism | Description                               | `bridge` field contains  |
+| --------- | ----------------------------------------- | ------------------------ |
+| `native`  | Token originated here, no bridge involved | (not needed)             |
+| `lock`    | Tokens are locked here when bridging out  | Lockbox contract address |
+| `mint`    | Tokens are minted here from another chain | Mint/bridge endpoint     |
+| `burn`    | Tokens are burned here when bridging out  | Burn/bridge endpoint     |
 
 ---
 
@@ -84,6 +84,7 @@ A token that only exists on MegaETH:
 ```
 
 **Output:**
+
 ```json
 {
   "chainId": 4326,
@@ -125,6 +126,7 @@ Native ETH bridged via the official MegaETH bridge:
 ```
 
 **Output (MegaETH):**
+
 ```json
 {
   "chainId": 4326,
@@ -173,6 +175,7 @@ CUSD is an OFT that uses a lockbox on Ethereum. Tokens are locked on Ethereum, m
 ```
 
 **Output (Ethereum - Origin):**
+
 ```json
 {
   "chainId": 1,
@@ -188,6 +191,7 @@ CUSD is an OFT that uses a lockbox on Ethereum. Tokens are locked on Ethereum, m
 ```
 
 **Output (MegaETH - Minted):**
+
 ```json
 {
   "chainId": 4326,
@@ -238,6 +242,7 @@ An OFT that burns on source and mints on destination (no lockbox):
 ```
 
 **Output (Ethereum):**
+
 ```json
 {
   "chainId": 1,
@@ -280,6 +285,7 @@ A token bridged from Solana via Wormhole:
 ```
 
 **Output:**
+
 ```json
 {
   "chainId": 4326,
@@ -305,19 +311,19 @@ The `extensions` object in the generated tokenlist:
 
 ### Origin & Mechanism
 
-| Field              | Type                    | Description                                |
-| ------------------ | ----------------------- | ------------------------------------------ |
-| `isOrigin`         | `boolean \| "unknown"`  | Is this the canonical origin chain?        |
-| `originChain`      | `string`                | Which chain has the origin supply          |
-| `mechanism`        | `string \| "unknown"`   | `"native"` `"lock"` `"mint"` `"burn"`      |
-| `originMechanism`  | `string`                | Mechanism on origin chain                  |
+| Field             | Type                   | Description                           |
+| ----------------- | ---------------------- | ------------------------------------- |
+| `isOrigin`        | `boolean \| "unknown"` | Is this the canonical origin chain?   |
+| `originChain`     | `string`               | Which chain has the origin supply     |
+| `mechanism`       | `string \| "unknown"`  | `"native"` `"lock"` `"mint"` `"burn"` |
+| `originMechanism` | `string`               | Mechanism on origin chain             |
 
 ### Bridge Info
 
-| Field                 | Type     | Description                                     |
-| --------------------- | -------- | ----------------------------------------------- |
-| `bridgeAddress`       | `string` | Bridge contract on this chain                   |
-| `bridgeType`          | `string` | `"canonical"` (official) or `"others"`          |
+| Field                 | Type     | Description                                       |
+| --------------------- | -------- | ------------------------------------------------- |
+| `bridgeAddress`       | `string` | Bridge contract on this chain                     |
+| `bridgeType`          | `string` | `"canonical"` (official) or `"others"`            |
 | `originBridgeAddress` | `string` | Bridge contract on origin chain (lockbox if lock) |
 
 ### Token Flags
@@ -339,13 +345,13 @@ The `extensions` object in the generated tokenlist:
 
 This tokenlist helps track token movement across chains without double-counting:
 
-| Check | What it tells you |
-| ----- | ----------------- |
-| `isOrigin: true` | This chain holds the canonical supply |
-| `mechanism: "lock"` | Tokens here are locked, backing supply elsewhere |
-| `mechanism: "mint"` | Tokens here are minted, backed by locked/burned tokens elsewhere |
-| `mechanism: "burn"` | Tokens burned here are minted elsewhere (supply conserved) |
-| `originBridgeAddress` | Where to watch for locked/backing tokens |
+| Check                 | What it tells you                                                |
+| --------------------- | ---------------------------------------------------------------- |
+| `isOrigin: true`      | This chain holds the canonical supply                            |
+| `mechanism: "lock"`   | Tokens here are locked, backing supply elsewhere                 |
+| `mechanism: "mint"`   | Tokens here are minted, backed by locked/burned tokens elsewhere |
+| `mechanism: "burn"`   | Tokens burned here are minted elsewhere (supply conserved)       |
+| `originBridgeAddress` | Where to watch for locked/backing tokens                         |
 
 ### Example: CUSD Supply Tracking
 

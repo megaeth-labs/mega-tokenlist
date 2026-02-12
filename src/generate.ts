@@ -1,7 +1,18 @@
 import * as fs from 'fs'
 import * as path from 'path'
-import { CHAIN_IDS, SOURCE_CHAINS, type EvmChain, type SourceChain } from './chains'
-import type { Mechanism, Token, TokenData, TokenList, TokenListToken } from './types'
+import {
+  CHAIN_IDS,
+  SOURCE_CHAINS,
+  type EvmChain,
+  type SourceChain,
+} from './chains'
+import type {
+  Mechanism,
+  Token,
+  TokenData,
+  TokenList,
+  TokenListToken,
+} from './types'
 
 const DATA_DIR = path.join(__dirname, '..', 'data')
 const OUTPUT_FILE = path.join(__dirname, '..', 'megaeth.tokenlist.json')
@@ -30,7 +41,7 @@ function readTokenData(symbol: string): TokenData {
 }
 
 // Find the origin chain info (chain name, bridge address, mechanism)
-function findOriginInfo(tokenData: TokenData): { 
+function findOriginInfo(tokenData: TokenData): {
   chain: string
   bridge?: string
   mechanism?: Mechanism
@@ -59,7 +70,9 @@ function findOriginInfo(tokenData: TokenData): {
 }
 
 // Find source chain info (non-EVM chains like Solana) for a token
-function findSourceChain(tokenData: TokenData): { chain: string; address: string } | null {
+function findSourceChain(
+  tokenData: TokenData
+): { chain: string; address: string } | null {
   for (const [chain, chainToken] of Object.entries(tokenData.tokens)) {
     if (SOURCE_CHAINS.includes(chain as SourceChain) && chainToken?.address) {
       return {
@@ -72,7 +85,10 @@ function findSourceChain(tokenData: TokenData): { chain: string; address: string
 }
 
 // Infer mechanism if not explicitly set
-function inferMechanism(chainToken: Token, isOrigin: boolean): Mechanism | 'unknown' {
+function inferMechanism(
+  chainToken: Token,
+  isOrigin: boolean
+): Mechanism | 'unknown' {
   // Explicit mechanism takes precedence
   if (chainToken.mechanism) {
     return chainToken.mechanism
