@@ -1,7 +1,18 @@
 import * as fs from 'fs'
 import * as path from 'path'
-import { CHAIN_IDS, type Chain } from './chains'
-import type { TokenData, TokenList, TokenListToken } from './types'
+import {
+  CHAIN_IDS,
+  SOURCE_CHAINS,
+  type EvmChain,
+  type SourceChain,
+} from './chains'
+import type {
+  Mechanism,
+  Token,
+  TokenData,
+  TokenList,
+  TokenListToken,
+} from './types'
 
 const DATA_DIR = path.join(__dirname, '..', 'data')
 const OUTPUT_FILE = path.join(__dirname, '..', 'megaeth.tokenlist.json')
@@ -29,6 +40,69 @@ function readTokenData(symbol: string): TokenData {
   return JSON.parse(content) as TokenData
 }
 
+// Find the origin chain info (chain name, bridge address, mechanism)
+function findOriginInfo(tokenData: TokenData): {
+  chain: string
+  bridge?: string
+  mechanism?: Mechanism
+} | null {
+  // First check EVM chains for explicit isOrigin
+  for (const [chain, chainToken] of Object.entries(tokenData.tokens)) {
+    if (chainToken?.isOrigin === true) {
+      return {
+        chain,
+        bridge: chainToken.bridge,
+        mechanism: chainToken.mechanism,
+      }
+    }
+  }
+  // Check non-EVM source chains
+  for (const [chain, chainToken] of Object.entries(tokenData.tokens)) {
+    if (SOURCE_CHAINS.includes(chain as SourceChain) && chainToken?.address) {
+      return {
+        chain,
+        bridge: undefined,
+        mechanism: undefined,
+      }
+    }
+  }
+  return null
+}
+
+// Find source chain info (non-EVM chains like Solana) for a token
+function findSourceChain(
+  tokenData: TokenData
+): { chain: string; address: string } | null {
+  for (const [chain, chainToken] of Object.entries(tokenData.tokens)) {
+    if (SOURCE_CHAINS.includes(chain as SourceChain) && chainToken?.address) {
+      return {
+        chain,
+        address: chainToken.address,
+      }
+    }
+  }
+  return null
+}
+
+// Infer mechanism if not explicitly set
+function inferMechanism(
+  chainToken: Token,
+  isOrigin: boolean
+): Mechanism | 'unknown' {
+  // Explicit mechanism takes precedence
+  if (chainToken.mechanism) {
+    return chainToken.mechanism
+  }
+  // Infer from other fields
+  if (isOrigin) {
+    return chainToken.bridge ? 'lock' : 'native'
+  }
+  // Non-origin chain
+  if (chainToken.isOFT) return 'burn'
+  if (chainToken.bridge) return 'mint'
+  return 'unknown'
+}
+
 export function generate(): TokenList {
   // Read all token directories
   const tokenDirs = fs
@@ -45,13 +119,51 @@ export function generate(): TokenList {
     const tokenDir = path.join(DATA_DIR, symbol)
     const tokenData = readTokenData(symbol)
     const logoExt = getLogoExtension(tokenDir)
+    const sourceChain = findSourceChain(tokenData)
+    const originInfo = findOriginInfo(tokenData)
 
-    // Create token entries for each chain
+    // Create token entries for each EVM chain
     for (const [chain, chainToken] of Object.entries(tokenData.tokens)) {
       if (!chainToken?.address) continue
 
-      const chainId = CHAIN_IDS[chain as Chain]
+      const chainId = CHAIN_IDS[chain as EvmChain]
       if (!chainId) continue
+
+      const isOrigin = chainToken.isOrigin === true
+      const mechanism = inferMechanism(chainToken, isOrigin)
+
+      // Build extensions object
+      const extensions: TokenListToken['extensions'] = {
+        isOrigin: chainToken.isOrigin ?? 'unknown',
+        mechanism,
+        isOFT: chainToken.isOFT ?? 'unknown',
+      }
+
+      // Add origin chain info for non-origin tokens
+      if (!isOrigin && originInfo) {
+        extensions.originChain = originInfo.chain
+        // Include origin bridge info so trackers know where backing is
+        if (originInfo.bridge) {
+          extensions.originBridgeAddress = originInfo.bridge
+        }
+        if (originInfo.mechanism) {
+          extensions.originMechanism = originInfo.mechanism
+        }
+      }
+
+      // Add bridge address for this chain
+      if (chainToken.bridge) {
+        extensions.bridgeAddress = chainToken.bridge
+        extensions.bridgeType = CANONICAL_BRIDGES.has(chainToken.bridge)
+          ? 'canonical'
+          : 'others'
+      }
+
+      // Add source chain info if bridged from non-EVM chain
+      if (sourceChain) {
+        extensions.sourceChain = sourceChain.chain
+        extensions.sourceAddress = sourceChain.address
+      }
 
       const token: TokenListToken = {
         chainId,
@@ -59,19 +171,7 @@ export function generate(): TokenList {
         name: tokenData.name,
         symbol: tokenData.symbol,
         decimals: tokenData.decimals,
-        extensions: chainToken.bridge
-          ? {
-              isNative: chainToken.isNative ?? 'unknown',
-              isOFT: chainToken.isOFT ?? 'unknown',
-              bridgeAddress: chainToken.bridge,
-              bridgeType: CANONICAL_BRIDGES.has(chainToken.bridge)
-                ? 'canonical'
-                : 'others',
-            }
-          : {
-              isNative: chainToken.isNative ?? 'unknown',
-              isOFT: chainToken.isOFT ?? 'unknown',
-            },
+        extensions,
       }
 
       if (logoExt) {
