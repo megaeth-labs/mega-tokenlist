@@ -1,0 +1,20 @@
+{
+  "name": "Wrapped SOL",
+  "symbol": "WSOL",
+  "decimals": 9,
+  "description": "Wrapped SOL bridged from Solana via Wormhole",
+  "tokens": {
+    "solana": {
+      "address": "So11111111111111111111111111111111111111112",
+      "isOrigin": true,
+      "mechanism": "lock",
+      "bridge": "wormDTUJ6AWPNvk59vGQbDvGJmqbDTdgWgAqcLBCgUb"
+    },
+    "megaeth": {
+      "address": "0x9a96E366F6b2ED5850A38B58D355a80aFD998411",
+      "isOrigin": false,
+      "mechanism": "mint",
+      "bridge": "0xF97B81E513f53c7a6B57Bd0b103a6c295b3096C5"
+    }
+  }
+}
