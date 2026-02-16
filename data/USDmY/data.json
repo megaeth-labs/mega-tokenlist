@@ -6,7 +6,8 @@
   "tokens": {
     "megaeth": {
       "address": "0x2eA493384F42d7Ea78564F3EF4C86986eAB4a890",
-      "isNative": true
+      "isOrigin": true,
+      "mechanism": "native"
     }
   }
 }
