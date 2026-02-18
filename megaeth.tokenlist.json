@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-02-18T03:54:00.569Z",
+  "timestamp": "2026-02-18T03:57:52.307Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -51,6 +51,21 @@
         "bridgeType": "others"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ezETH/logo.svg"
+    },
+    {
+      "chainId": 1,
+      "address": "0xD9A442856C234a39a81a089C06451EBAa4306a72",
+      "name": "pufETH",
+      "symbol": "pufETH",
+      "decimals": 18,
+      "extensions": {
+        "isOrigin": "unknown",
+        "mechanism": "lock",
+        "isOFT": true,
+        "bridgeAddress": "0xa4931a9F9Aaf79057334371D6f62164743f97b18",
+        "bridgeType": "others"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/pufETH/logo.svg"
     },
     {
       "chainId": 1,
@@ -251,6 +266,19 @@
         "isOFT": "unknown"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/MegaSIR/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x37D6382B6889cCeF8d6871A8b60E667115eDDBcF",
+      "name": "pufETH",
+      "symbol": "pufETH",
+      "decimals": 18,
+      "extensions": {
+        "isOrigin": "unknown",
+        "mechanism": "burn",
+        "isOFT": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/pufETH/logo.svg"
     },
     {
       "chainId": 4326,
