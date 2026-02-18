@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-02-14T01:48:50.054Z",
+  "timestamp": "2026-02-18T03:54:00.569Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -14,8 +14,8 @@
       "symbol": "CUSD",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "burn",
+        "isOrigin": true,
+        "mechanism": "lock",
         "isOFT": true,
         "bridgeAddress": "0xA62571EbdFfAbC3051a2e5B9e1f57b23D830c8Fd",
         "bridgeType": "others"
@@ -44,8 +44,8 @@
       "symbol": "ezETH",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "mint",
+        "isOrigin": true,
+        "mechanism": "lock",
         "isOFT": false,
         "bridgeAddress": "0xC8140dA31E6bCa19b287cC35531c2212763C2059",
         "bridgeType": "others"
@@ -59,8 +59,8 @@
       "symbol": "rsETH",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "burn",
+        "isOrigin": true,
+        "mechanism": "lock",
         "isOFT": true,
         "bridgeAddress": "0x85d456B2DfF1fd8245387C0BfB64Dfb700e98Ef3",
         "bridgeType": "others"
@@ -74,8 +74,8 @@
       "symbol": "STCUSD",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "burn",
+        "isOrigin": true,
+        "mechanism": "lock",
         "isOFT": true,
         "bridgeAddress": "0x983AEAaA0d0426839158435C43725EA7F45d4137",
         "bridgeType": "others"
@@ -89,8 +89,8 @@
       "symbol": "sUSDe",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "burn",
+        "isOrigin": true,
+        "mechanism": "lock",
         "isOFT": true,
         "bridgeAddress": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
         "bridgeType": "others"
@@ -104,8 +104,8 @@
       "symbol": "USDe",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "burn",
+        "isOrigin": true,
+        "mechanism": "lock",
         "isOFT": true,
         "bridgeAddress": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
         "bridgeType": "others"
@@ -160,8 +160,8 @@
       "symbol": "wstETH",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "unknown",
+        "isOrigin": true,
+        "mechanism": "native",
         "isOFT": false
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/wstETH/logo.svg"
@@ -186,9 +186,12 @@
       "symbol": "CUSD",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "burn",
-        "isOFT": true
+        "isOrigin": false,
+        "mechanism": "mint",
+        "isOFT": true,
+        "originChain": "ethereum",
+        "originBridgeAddress": "0xA62571EbdFfAbC3051a2e5B9e1f57b23D830c8Fd",
+        "originMechanism": "lock"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/CUSD/logo.svg"
     },
@@ -214,9 +217,12 @@
       "symbol": "ezETH",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "unknown",
-        "isOFT": false
+        "isOrigin": false,
+        "mechanism": "mint",
+        "isOFT": false,
+        "originChain": "ethereum",
+        "originBridgeAddress": "0xC8140dA31E6bCa19b287cC35531c2212763C2059",
+        "originMechanism": "lock"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ezETH/logo.svg"
     },
@@ -227,8 +233,8 @@
       "symbol": "MEGA",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "unknown",
+        "isOrigin": true,
+        "mechanism": "native",
         "isOFT": false
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/MEGA/logo.svg"
@@ -240,8 +246,8 @@
       "symbol": "MegaSIR",
       "decimals": 12,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "unknown",
+        "isOrigin": true,
+        "mechanism": "native",
         "isOFT": "unknown"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/MegaSIR/logo.svg"
@@ -253,9 +259,12 @@
       "symbol": "rsETH",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "burn",
-        "isOFT": true
+        "isOrigin": false,
+        "mechanism": "mint",
+        "isOFT": true,
+        "originChain": "ethereum",
+        "originBridgeAddress": "0x85d456B2DfF1fd8245387C0BfB64Dfb700e98Ef3",
+        "originMechanism": "lock"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/rsETH/logo.svg"
     },
@@ -266,9 +275,12 @@
       "symbol": "STCUSD",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "burn",
-        "isOFT": true
+        "isOrigin": false,
+        "mechanism": "mint",
+        "isOFT": true,
+        "originChain": "ethereum",
+        "originBridgeAddress": "0x983AEAaA0d0426839158435C43725EA7F45d4137",
+        "originMechanism": "lock"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/STCUSD/logo.png"
     },
@@ -279,9 +291,12 @@
       "symbol": "sUSDe",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "burn",
-        "isOFT": true
+        "isOrigin": false,
+        "mechanism": "mint",
+        "isOFT": true,
+        "originChain": "ethereum",
+        "originBridgeAddress": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+        "originMechanism": "lock"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/SUSDE/logo.svg"
     },
@@ -292,9 +307,12 @@
       "symbol": "USDe",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "burn",
-        "isOFT": true
+        "isOrigin": false,
+        "mechanism": "mint",
+        "isOFT": true,
+        "originChain": "ethereum",
+        "originBridgeAddress": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+        "originMechanism": "lock"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDE/logo.svg"
     },
@@ -318,8 +336,8 @@
       "symbol": "USDmY",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "unknown",
+        "isOrigin": true,
+        "mechanism": "native",
         "isOFT": "unknown"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDmY/logo.svg"
@@ -408,9 +426,11 @@
       "symbol": "wstETH",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
+        "isOrigin": false,
         "mechanism": "mint",
         "isOFT": false,
+        "originChain": "ethereum",
+        "originMechanism": "native",
         "bridgeAddress": "0x1ba9bE96A5c21dcdB9D22bEC3f00abCb6336fd65",
         "bridgeType": "others"
       },
