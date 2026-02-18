@@ -5,14 +5,16 @@
   "tokens": {
     "ethereum": {
       "address": "0x0000000000000000000000000000000000000000",
-      "bridge": "0x0CA3A2FBC3D770b578223FBB6b062fa875a2eE75",
-      "isNative": true,
+      "isOrigin": true,
+      "mechanism": "lock",
+      "bridge": "0x7f82f57f0dd546519324392e408b01fcc7d709e8",
       "isOFT": false
     },
     "megaeth": {
       "address": "0x0000000000000000000000000000000000000000",
+      "isOrigin": false,
+      "mechanism": "mint",
       "bridge": "0x4200000000000000000000000000000000000010",
-      "isNative": true,
       "isOFT": false
     }
   }
