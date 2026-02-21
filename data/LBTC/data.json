@@ -1,0 +1,14 @@
+{
+  "name": "Lombard Staked BTC",
+  "symbol": "LBTC",
+  "decimals": 8,
+  "tokens": {
+    "megaeth": {
+      "address": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
+      "bridge": "0xfa546248C54939AA6C48279CdC1EAf9A1125c411",
+      "isOrigin": false,
+      "isOFT": false,
+      "mechanism": "mint"
+    }
+  }
+}
