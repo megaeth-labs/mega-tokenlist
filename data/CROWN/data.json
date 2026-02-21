@@ -1,0 +1,13 @@
+{
+  "name": "Crown Credits",
+  "symbol": "CROWN",
+  "decimals": 18,
+  "tokens": {
+    "megaeth": {
+      "address": "0xf7d2F0d0b0517CBDbf87C86910ce10FaAab3589D",
+      "isOrigin": true,
+      "isOFT": false,
+      "mechanism": "native"
+    }
+  }
+}

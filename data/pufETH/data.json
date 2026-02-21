@@ -8,14 +8,15 @@
     "ethereum": {
       "address": "0xD9A442856C234a39a81a089C06451EBAa4306a72",
       "bridge": "0xa4931a9F9Aaf79057334371D6f62164743f97b18",
-      "mechanism": "lock",
-      "isNative": true,
-      "isOFT": true
+      "isOrigin": true,
+      "isOFT": true,
+      "mechanism": "lock"
     },
     "megaeth": {
       "address": "0x37D6382B6889cCeF8d6871A8b60E667115eDDBcF",
-      "isNative": false,
-      "isOFT": true
+      "isOrigin": false,
+      "isOFT": true,
+      "mechanism": "mint"
     }
   }
 }
