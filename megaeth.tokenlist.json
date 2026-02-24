@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-02-18T03:57:52.307Z",
+  "timestamp": "2026-02-24T01:41:27.206Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -29,11 +29,11 @@
       "symbol": "ETH",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "mint",
+        "isOrigin": true,
+        "mechanism": "lock",
         "isOFT": false,
-        "bridgeAddress": "0x0CA3A2FBC3D770b578223FBB6b062fa875a2eE75",
-        "bridgeType": "canonical"
+        "bridgeAddress": "0x7f82f57f0dd546519324392e408b01fcc7d709e8",
+        "bridgeType": "others"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ETH/logo.svg"
     },
@@ -59,7 +59,7 @@
       "symbol": "pufETH",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
+        "isOrigin": true,
         "mechanism": "lock",
         "isOFT": true,
         "bridgeAddress": "0xa4931a9F9Aaf79057334371D6f62164743f97b18",
@@ -134,8 +134,8 @@
       "symbol": "USDM",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "burn",
+        "isOrigin": true,
+        "mechanism": "native",
         "isOFT": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDM/logo.png"
@@ -162,8 +162,8 @@
       "symbol": "WETH",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "unknown",
+        "isOrigin": true,
+        "mechanism": "native",
         "isOFT": false
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WETH/logo.svg"
@@ -188,11 +188,26 @@
       "symbol": "BTC.b",
       "decimals": 8,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "unknown",
-        "isOFT": false
+        "isOrigin": false,
+        "mechanism": "mint",
+        "isOFT": false,
+        "bridgeAddress": "0xfa546248C54939AA6C48279CdC1EAf9A1125c411",
+        "bridgeType": "others"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/BTC.b/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0xf7d2F0d0b0517CBDbf87C86910ce10FaAab3589D",
+      "name": "Crown Credits",
+      "symbol": "CROWN",
+      "decimals": 18,
+      "extensions": {
+        "isOrigin": true,
+        "mechanism": "native",
+        "isOFT": false
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/CROWN/logo.png"
     },
     {
       "chainId": 4326,
@@ -217,9 +232,12 @@
       "symbol": "ETH",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
+        "isOrigin": false,
         "mechanism": "mint",
         "isOFT": false,
+        "originChain": "ethereum",
+        "originBridgeAddress": "0x7f82f57f0dd546519324392e408b01fcc7d709e8",
+        "originMechanism": "lock",
         "bridgeAddress": "0x4200000000000000000000000000000000000010",
         "bridgeType": "canonical"
       },
@@ -240,6 +258,21 @@
         "originMechanism": "lock"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ezETH/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
+      "name": "Lombard Staked BTC",
+      "symbol": "LBTC",
+      "decimals": 8,
+      "extensions": {
+        "isOrigin": false,
+        "mechanism": "mint",
+        "isOFT": false,
+        "bridgeAddress": "0xfa546248C54939AA6C48279CdC1EAf9A1125c411",
+        "bridgeType": "others"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/LBTC/logo.svg"
     },
     {
       "chainId": 4326,
@@ -274,9 +307,12 @@
       "symbol": "pufETH",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "burn",
-        "isOFT": true
+        "isOrigin": false,
+        "mechanism": "mint",
+        "isOFT": true,
+        "originChain": "ethereum",
+        "originBridgeAddress": "0xa4931a9F9Aaf79057334371D6f62164743f97b18",
+        "originMechanism": "lock"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/pufETH/logo.svg"
     },
@@ -351,9 +387,11 @@
       "symbol": "USDM",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "burn",
-        "isOFT": true
+        "isOrigin": false,
+        "mechanism": "mint",
+        "isOFT": true,
+        "originChain": "ethereum",
+        "originMechanism": "native"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDM/logo.png"
     },
@@ -377,8 +415,8 @@
       "symbol": "USDT0",
       "decimals": 6,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "burn",
+        "isOrigin": false,
+        "mechanism": "mint",
         "isOFT": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDT0/logo.png"
@@ -408,8 +446,8 @@
       "symbol": "WETH",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "unknown",
+        "isOrigin": true,
+        "mechanism": "native",
         "isOFT": false
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WETH/logo.svg"
@@ -421,8 +459,8 @@
       "symbol": "wrsETH",
       "decimals": 18,
       "extensions": {
-        "isOrigin": "unknown",
-        "mechanism": "unknown",
+        "isOrigin": true,
+        "mechanism": "native",
         "isOFT": "unknown"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/wrsETH/logo.svg"
