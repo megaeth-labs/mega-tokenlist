@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-02-24T01:41:27.206Z",
+  "timestamp": "2026-04-20T23:30:47.998Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -315,6 +315,19 @@
         "originMechanism": "lock"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/pufETH/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x4fd02a1A80923cE1D7E70A8719421431Ea286941",
+      "name": "Chisino pUSD",
+      "symbol": "pUSD",
+      "decimals": 18,
+      "extensions": {
+        "isOrigin": true,
+        "mechanism": "native",
+        "isOFT": false
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/pUSD/logo.svg"
     },
     {
       "chainId": 4326,
