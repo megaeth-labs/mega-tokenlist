@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-02-24T01:41:27.206Z",
+  "timestamp": "2026-04-20T22:58:51.684Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -258,6 +258,19 @@
         "originMechanism": "lock"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ezETH/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0xC1D160c29d7278F02C67Da8bC8e046D759Fe7352",
+      "name": "HOUSE",
+      "symbol": "HOUSE",
+      "decimals": 18,
+      "extensions": {
+        "isOrigin": true,
+        "mechanism": "native",
+        "isOFT": false
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/HOUSE/logo.svg"
     },
     {
       "chainId": 4326,
