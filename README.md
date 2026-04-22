@@ -50,6 +50,7 @@ The generated tokenlists follow the [Uniswap Token List](https://github.com/Unis
 Each chain entry in `tokens` supports.
 
 Supported keys today:
+
 - `ethereum`
 - `megaeth`
 - `megaeth_testnet`

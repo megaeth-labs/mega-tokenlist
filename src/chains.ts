@@ -55,7 +55,10 @@ export const L2_TO_L1: Record<L2Chain, L1Chain> = {
 
 export type TokenListTarget = 'mainnet' | 'testnet'
 
-export const TOKENLIST_TARGET_CHAINS: Record<TokenListTarget, readonly EvmChain[]> = {
+export const TOKENLIST_TARGET_CHAINS: Record<
+  TokenListTarget,
+  readonly EvmChain[]
+> = {
   mainnet: ['ethereum', 'megaeth'],
   testnet: ['megaeth_testnet'],
 }

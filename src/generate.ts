@@ -197,7 +197,9 @@ export function generate(target: TokenListTarget = 'mainnet'): TokenList {
 
   const tokenList: TokenList = {
     name:
-      target === 'mainnet' ? 'MegaETH Token List' : 'MegaETH Testnet Token List',
+      target === 'mainnet'
+        ? 'MegaETH Token List'
+        : 'MegaETH Testnet Token List',
     timestamp: new Date().toISOString(),
     version: {
       major: 1,
@@ -216,6 +218,8 @@ if (require.main === module) {
     const tokenList = generate(target)
     const outputFile = OUTPUT_FILES[target]
     fs.writeFileSync(outputFile, JSON.stringify(tokenList, null, 2))
-    console.log(`Generated ${outputFile} with ${tokenList.tokens.length} tokens`)
+    console.log(
+      `Generated ${outputFile} with ${tokenList.tokens.length} tokens`
+    )
   }
 }
