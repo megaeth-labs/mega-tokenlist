@@ -6,8 +6,7 @@ This file tells coding agents how to contribute to this repository safely.
 
 This repository stores token metadata under `data/` and generates tokenlists automatically.
 
-For routine token submissions, agents should only edit token metadata and logos.
-Generated tokenlists and repo logic are maintained separately.
+For routine token submissions, agents should only edit token metadata and logos. Generated tokenlists and repo logic are maintained separately.
 
 ---
 
@@ -34,6 +33,8 @@ Do not manually edit:
 
 These files are generated automatically after merge.
 
+Generated tokenlists are CI-owned artifacts. Agents should treat them as read-only in routine PRs.
+
 If your PR includes changes to generated tokenlists for a routine token submission, remove them before submitting.
 
 ---
@@ -41,20 +42,25 @@ If your PR includes changes to generated tokenlists for a routine token submissi
 ## Allowed PR types
 
 ### 1. Routine token submission
+
 Examples:
+
 - add a new token
 - update token metadata
 - add or replace a token logo
 - add a testnet token entry in `data/`
 
 For these PRs:
+
 - modify only `data/**`
 - do not change repo code
 - do not change docs
 - do not regenerate outputs manually
 
 ### 2. Maintainer-level repo change
+
 Examples:
+
 - add new supported chain keys
 - change generation logic
 - change output file structure
@@ -62,6 +68,7 @@ Examples:
 - update README/AGENTS/docs for contributor policy
 
 These are not routine token submissions.
+
 If asked to do this, explicitly state that the PR is a repo-level change and may be blocked by external contributor rules.
 
 ---
@@ -91,19 +98,21 @@ Example:
   }
 }
 ```
+
 ---
 
 ## Testnet policy
 
-Testnet tokens belong in data/ just like mainnet tokens.
+Testnet tokens belong in `data/` just like mainnet tokens.
 
 To add a MegaETH testnet token, use:
 
-• tokens.megaeth_testnet
+- `tokens.megaeth_testnet`
 
 Do not create or edit generated testnet tokenlist files manually.
 
 Example:
+
 ```json
 {
   "name": "Project Blue",
@@ -118,24 +127,25 @@ Example:
   }
 }
 ```
+
 ---
 
 ## Per-chain fields
 
 Each chain entry may include:
 
-- address (required)
-- isOrigin
-- mechanism
-- bridge
-- isOFT
+- `address` (required)
+- `isOrigin`
+- `mechanism`
+- `bridge`
+- `isOFT`
 
-## Mechanism meanings:
+### Mechanism meanings
 
-- native: originated on this chain
-- lock: locked on this chain when bridging out
-- mint: minted on this chain from another chain
-- burn: burned on this chain when bridging out
+- `native` — originated on this chain
+- `lock` — locked on this chain when bridging out
+- `mint` — minted on this chain from another chain
+- `burn` — burned on this chain when bridging out
 
 If mechanism/origin/bridge data is uncertain, do not guess. Ask or leave the PR narrower.
 
@@ -143,26 +153,26 @@ If mechanism/origin/bridge data is uncertain, do not guess. Ask or leave the PR 
 
 ## Address and metadata rules
 
-Addresses
+### Addresses
 
 - Use checksummed EVM addresses (EIP-55)
 - Verify addresses on the target chain before submitting
-- Only use 0x0000000000000000000000000000000000000000 when the repo convention explicitly uses it for the native gas token representation
+- Only use `0x0000000000000000000000000000000000000000` when the repo convention explicitly uses it for the native gas token representation
 
-Decimals
+### Decimals
 
 - Must match on-chain decimals
 - Do not infer blindly
 
-Logos
+### Logos
 
-- Use logo.svg or logo.png
+- Use `logo.svg` or `logo.png`
 - Prefer clean, production-safe assets
-- Keep filenames exactly logo.svg or logo.png
+- Keep filenames exactly `logo.svg` or `logo.png`
 
-Folder naming
+### Folder naming
 
-Use data/<SYMBOL>/ following existing repo conventions.
+Use `data/<SYMBOL>/` following existing repo conventions.
 
 If a symbol collision or naming ambiguity exists, inspect existing folders first and follow precedent.
 
@@ -170,13 +180,15 @@ If a symbol collision or naming ambiguity exists, inspect existing folders first
 
 ## Required pre-PR check
 
-Before submitting a routine token PR, confirm the diff only touches data/**.
+Before submitting a routine token PR, confirm the diff only touches `data/**`.
 
 Example:
 
+```bash
 git diff --name-only origin/main...HEAD
+```
 
-If any file outside data/ appears, remove it unless this is explicitly a maintainer-level repo change.
+If any file outside `data/` appears, remove it unless this is explicitly a maintainer-level repo change.
 
 ---
 
@@ -203,9 +215,9 @@ Bad:
 
 PR title should be direct, for example:
 
-- Add BLU token on MegaETH testnet
-- Update CUSD bridge metadata
-- Add logo for USDM
+- `Add BLU token on MegaETH testnet`
+- `Update CUSD bridge metadata`
+- `Add logo for USDM`
 
 PR body should include:
 
@@ -221,10 +233,10 @@ PR body should include:
 
 ## What agents must not do
 
-### Do not:
+Do not:
 
 - manually regenerate tokenlists for routine token PRs
-- commit changes outside data/ in a normal token PR
+- commit changes outside `data/` in a normal token PR
 - modify workflows, README, or generator code unless explicitly asked
 - invent bridge metadata
 - guess origin/mechanism when uncertain
