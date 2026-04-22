@@ -90,10 +90,10 @@ Example:
     }
   }
 }
+```
+---
 
-───
-
-Testnet policy
+## Testnet policy
 
 Testnet tokens belong in data/ just like mainnet tokens.
 
@@ -104,6 +104,7 @@ To add a MegaETH testnet token, use:
 Do not create or edit generated testnet tokenlist files manually.
 
 Example:
+```json
 {
   "name": "Project Blue",
   "symbol": "BLU",
@@ -116,47 +117,48 @@ Example:
     }
   }
 }
-───
+```
+---
 
-Per-chain fields
+## Per-chain fields
 
 Each chain entry may include:
 
-• address (required)
-• isOrigin
-• mechanism
-• bridge
-• isOFT
+- address (required)
+- isOrigin
+- mechanism
+- bridge
+- isOFT
 
-Mechanism meanings:
+## Mechanism meanings:
 
-• native — originated on this chain
-• lock — locked on this chain when bridging out
-• mint — minted on this chain from another chain
-• burn — burned on this chain when bridging out
+- native: originated on this chain
+- lock: locked on this chain when bridging out
+- mint: minted on this chain from another chain
+- burn: burned on this chain when bridging out
 
 If mechanism/origin/bridge data is uncertain, do not guess. Ask or leave the PR narrower.
 
-───
+---
 
-Address and metadata rules
+## Address and metadata rules
 
 Addresses
 
-• Use checksummed EVM addresses (EIP-55)
-• Verify addresses on the target chain before submitting
-• Only use 0x0000000000000000000000000000000000000000 when the repo convention explicitly uses it for the native gas token representation
+- Use checksummed EVM addresses (EIP-55)
+- Verify addresses on the target chain before submitting
+- Only use 0x0000000000000000000000000000000000000000 when the repo convention explicitly uses it for the native gas token representation
 
 Decimals
 
-• Must match on-chain decimals
-• Do not infer blindly
+- Must match on-chain decimals
+- Do not infer blindly
 
 Logos
 
-• Use logo.svg or logo.png
-• Prefer clean, production-safe assets
-• Keep filenames exactly logo.svg or logo.png
+- Use logo.svg or logo.png
+- Prefer clean, production-safe assets
+- Keep filenames exactly logo.svg or logo.png
 
 Folder naming
 
@@ -164,9 +166,9 @@ Use data/<SYMBOL>/ following existing repo conventions.
 
 If a symbol collision or naming ambiguity exists, inspect existing folders first and follow precedent.
 
-───
+---
 
-Required pre-PR check
+## Required pre-PR check
 
 Before submitting a routine token PR, confirm the diff only touches data/**.
 
@@ -176,56 +178,57 @@ git diff --name-only origin/main...HEAD
 
 If any file outside data/ appears, remove it unless this is explicitly a maintainer-level repo change.
 
-───
-PR scope rules
+---
+
+## PR scope rules
 
 Keep PRs narrow.
 
 Good:
 
-• one token addition
-• one metadata correction
-• one logo replacement
+- one token addition
+- one metadata correction
+- one logo replacement
 
 Bad:
 
-• multiple unrelated token edits
-• mixed repo logic + token data
-• generated output noise
-• opportunistic cleanup unrelated to the request
+- multiple unrelated token edits
+- mixed repo logic + token data
+- generated output noise
+- opportunistic cleanup unrelated to the request
 
-───
+---
 
-PR writing rules
+## PR writing rules
 
 PR title should be direct, for example:
 
-• Add BLU token on MegaETH testnet
-• Update CUSD bridge metadata
-• Add logo for USDM
+- Add BLU token on MegaETH testnet
+- Update CUSD bridge metadata
+- Add logo for USDM
 
 PR body should include:
 
-• token name
-• token symbol
-• decimals
-• chain(s)
-• contract address(es)
-• whether native / bridged / OFT
-• bridge address if applicable
+- token name
+- token symbol
+- decimals
+- chain(s)
+- contract address(es)
+- whether native / bridged / OFT
+- bridge address if applicable
 
-───
+---
 
-What agents must not do
+## What agents must not do
 
-Do not:
+### Do not:
 
-• manually regenerate tokenlists for routine token PRs
-• commit changes outside data/ in a normal token PR
-• modify workflows, README, or generator code unless explicitly asked
-• invent bridge metadata
-• guess origin/mechanism when uncertain
-• rename folders casually
-• bundle unrelated cleanup with a token submission
+- manually regenerate tokenlists for routine token PRs
+- commit changes outside data/ in a normal token PR
+- modify workflows, README, or generator code unless explicitly asked
+- invent bridge metadata
+- guess origin/mechanism when uncertain
+- rename folders casually
+- bundle unrelated cleanup with a token submission
 
 When uncertain, prefer a smaller PR and state the uncertainty clearly.
