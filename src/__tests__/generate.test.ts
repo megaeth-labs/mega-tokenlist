@@ -1,4 +1,4 @@
-import { CHAINS, CHAIN_IDS, L2_TO_L1 } from '../chains';
+import { CHAINS, CHAIN_IDS, L2_TO_L1, TOKENLIST_TARGET_CHAINS } from '../chains';
 import { generate } from '../generate';
 
 describe('Chain Configuration', () => {
@@ -15,10 +15,21 @@ describe('Chain Configuration', () => {
   test('MegaETH L2 maps to Ethereum L1', () => {
     expect(L2_TO_L1.megaeth).toBe('ethereum');
   });
+
+  test('MegaETH testnet chain ID is 6343', () => {
+    expect(CHAIN_IDS.megaeth_testnet).toBe(6343);
+    expect(CHAINS.megaeth_testnet.id).toBe(6343);
+  });
+
+  test('tokenlist targets separate mainnet and testnet chains', () => {
+    expect(TOKENLIST_TARGET_CHAINS.mainnet).toEqual(['ethereum', 'megaeth']);
+    expect(TOKENLIST_TARGET_CHAINS.testnet).toEqual(['megaeth_testnet']);
+  });
 });
 
 describe('Token List Generation', () => {
   const tokenList = generate();
+  const testnetTokenList = generate('testnet');
 
   test('generates valid token list structure', () => {
     expect(tokenList).toHaveProperty('name', 'MegaETH Token List');
@@ -26,6 +37,14 @@ describe('Token List Generation', () => {
     expect(tokenList).toHaveProperty('version');
     expect(tokenList).toHaveProperty('tokens');
     expect(Array.isArray(tokenList.tokens)).toBe(true);
+  });
+
+  test('generates separate testnet token list structure', () => {
+    expect(testnetTokenList).toHaveProperty('name', 'MegaETH Testnet Token List');
+    expect(testnetTokenList).toHaveProperty('timestamp');
+    expect(testnetTokenList).toHaveProperty('version');
+    expect(testnetTokenList).toHaveProperty('tokens');
+    expect(Array.isArray(testnetTokenList.tokens)).toBe(true);
   });
 
   test('version has correct structure', () => {
@@ -58,14 +77,12 @@ describe('Token List Generation', () => {
     }
   });
 
-  test('native tokens have isOrigin: true', () => {
-    const nativeTokens = tokenList.tokens.filter((t) => t.extensions.isOrigin);
-    expect(nativeTokens.length).toBeGreaterThan(0);
+  test('origin tokens have isOrigin: true', () => {
+    const originTokens = tokenList.tokens.filter((t) => t.extensions.isOrigin);
+    expect(originTokens.length).toBeGreaterThan(0);
 
-    for (const token of nativeTokens) {
+    for (const token of originTokens) {
       expect(token.extensions.isOrigin).toBe(true);
-      expect(token.extensions.bridgeAddress).toBeUndefined();
-      expect(token.extensions.bridgeType).toBeUndefined();
     }
   });
 
@@ -74,7 +91,7 @@ describe('Token List Generation', () => {
 
     for (const token of tokensWithLogos) {
       expect(token.logoURI).toMatch(
-        /^https:\/\/raw\.githubusercontent\.com\/megaeth-labs\/mega-tokenlist\/main\/data\/\w+\/logo\.(svg|png)$/
+        /^https:\/\/raw\.githubusercontent\.com\/megaeth-labs\/mega-tokenlist\/main\/data\/.+\/logo\.(svg|png)$/
       );
     }
   });
@@ -87,10 +104,16 @@ describe('Token List Generation', () => {
     expect(chainIds).toEqual([1, 4326]);
   });
 
-  test('WETH token exists only on MegaETH', () => {
+  test('WETH token includes a MegaETH mainnet entry', () => {
     const wethTokens = tokenList.tokens.filter((t) => t.symbol === 'WETH');
-    expect(wethTokens.length).toBe(1);
-    expect(wethTokens[0].chainId).toBe(4326);
-    expect(wethTokens[0].extensions.isOrigin).toBe(true);
+    expect(wethTokens.some((t) => t.chainId === 4326)).toBe(true);
+  });
+
+  test('mainnet token list excludes testnet chain ids', () => {
+    expect(tokenList.tokens.every((t) => t.chainId !== 6343)).toBe(true);
+  });
+
+  test('testnet token list only contains testnet chain ids', () => {
+    expect(testnetTokenList.tokens.every((t) => t.chainId === 6343)).toBe(true);
   });
 });

@@ -3,8 +3,10 @@ import * as path from 'path'
 import {
   CHAIN_IDS,
   SOURCE_CHAINS,
+  TOKENLIST_TARGET_CHAINS,
   type EvmChain,
   type SourceChain,
+  type TokenListTarget,
 } from './chains'
 import type {
   Mechanism,
@@ -15,7 +17,10 @@ import type {
 } from './types'
 
 const DATA_DIR = path.join(__dirname, '..', 'data')
-const OUTPUT_FILE = path.join(__dirname, '..', 'megaeth.tokenlist.json')
+const OUTPUT_FILES: Record<TokenListTarget, string> = {
+  mainnet: path.join(__dirname, '..', 'megaeth.tokenlist.json'),
+  testnet: path.join(__dirname, '..', 'megaeth.testnet.tokenlist.json'),
+}
 const LOGO_BASE_URL =
   'https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data'
 
@@ -103,7 +108,7 @@ function inferMechanism(
   return 'unknown'
 }
 
-export function generate(): TokenList {
+export function generate(target: TokenListTarget = 'mainnet'): TokenList {
   // Read all token directories
   const tokenDirs = fs
     .readdirSync(DATA_DIR)
@@ -114,6 +119,7 @@ export function generate(): TokenList {
     .sort()
 
   const tokens: TokenListToken[] = []
+  const includedChains = new Set<EvmChain>(TOKENLIST_TARGET_CHAINS[target])
 
   for (const symbol of tokenDirs) {
     const tokenDir = path.join(DATA_DIR, symbol)
@@ -126,8 +132,9 @@ export function generate(): TokenList {
     for (const [chain, chainToken] of Object.entries(tokenData.tokens)) {
       if (!chainToken?.address) continue
 
-      const chainId = CHAIN_IDS[chain as EvmChain]
-      if (!chainId) continue
+      const evmChain = chain as EvmChain
+      const chainId = CHAIN_IDS[evmChain]
+      if (!chainId || !includedChains.has(evmChain)) continue
 
       const isOrigin = chainToken.isOrigin === true
       const mechanism = inferMechanism(chainToken, isOrigin)
@@ -189,7 +196,8 @@ export function generate(): TokenList {
   })
 
   const tokenList: TokenList = {
-    name: 'MegaETH Token List',
+    name:
+      target === 'mainnet' ? 'MegaETH Token List' : 'MegaETH Testnet Token List',
     timestamp: new Date().toISOString(),
     version: {
       major: 1,
@@ -204,7 +212,10 @@ export function generate(): TokenList {
 
 // Main execution
 if (require.main === module) {
-  const tokenList = generate()
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(tokenList, null, 2))
-  console.log(`Generated ${OUTPUT_FILE} with ${tokenList.tokens.length} tokens`)
+  for (const target of ['mainnet', 'testnet'] as const) {
+    const tokenList = generate(target)
+    const outputFile = OUTPUT_FILES[target]
+    fs.writeFileSync(outputFile, JSON.stringify(tokenList, null, 2))
+    console.log(`Generated ${outputFile} with ${tokenList.tokens.length} tokens`)
+  }
 }
