@@ -1,18 +1,19 @@
 # MegaETH Token List
 
-The official token registry for the MegaETH ecosystem. This repository maintains a curated list of tokens deployed on MegaETH and their corresponding addresses on other chains for bridging and cross-chain tracking.
+The official token registry for the MegaETH ecosystem. This repository maintains curated token lists for MegaETH and their corresponding addresses on other chains for bridging and cross-chain tracking.
 
-The generated tokenlist follows the [Uniswap Token List](https://github.com/Uniswap/token-lists) standard with MegaETH-specific extensions for tracking bridge mechanics and token origins.
+The generated tokenlists follow the [Uniswap Token List](https://github.com/Uniswap/token-lists) standard with MegaETH-specific extensions for tracking bridge mechanics and token origins.
 
 ## Supported Chains
 
-| Chain    | Chain ID | Type   | Description                             |
-| -------- | -------- | ------ | --------------------------------------- |
-| Ethereum | 1        | L1     | Ethereum mainnet                        |
-| MegaETH  | 4326     | L2     | MegaETH mainnet                         |
-| Solana   | -        | Source | Non-EVM source chain for bridged assets |
+| Chain           | Chain ID | Type   | Description                             |
+| --------------- | -------- | ------ | --------------------------------------- |
+| Ethereum        | 1        | L1     | Ethereum mainnet                        |
+| MegaETH         | 4326     | L2     | MegaETH mainnet                         |
+| MegaETH Testnet | 6343     | L2     | MegaETH testnet                         |
+| Solana          | -        | Source | Non-EVM source chain for bridged assets |
 
-> **Note:** Only EVM chains (Ethereum, MegaETH) appear in the generated tokenlist. Non-EVM chains like Solana are tracked as source chains — their addresses appear in the `extensions` field.
+> **Note:** This repo produces separate outputs for mainnet and testnet. The mainnet tokenlist includes only Ethereum + MegaETH mainnet entries. Testnet tokens are emitted only in the separate testnet list to avoid contaminating production consumers.
 
 ---
 
@@ -24,6 +25,11 @@ The generated tokenlist follows the [Uniswap Token List](https://github.com/Unis
 2. Add `data.json` with token info
 3. Add `logo.svg` or `logo.png` (256×256 recommended)
 4. Submit a PR
+
+### Generated Outputs
+
+- `megaeth.tokenlist.json` — mainnet list (Ethereum + MegaETH mainnet)
+- `megaeth.testnet.tokenlist.json` — testnet list (MegaETH testnet only)
 
 ---
 
@@ -40,6 +46,15 @@ The generated tokenlist follows the [Uniswap Token List](https://github.com/Unis
 | `website`     | string |          | Project website URL                |
 
 ### Per-Chain Fields
+
+Each chain entry in `tokens` supports.
+
+Supported keys today:
+
+- `ethereum`
+- `megaeth`
+- `megaeth_testnet`
+- `solana` (source tracking only, not emitted directly into tokenlists)
 
 Each chain entry in `tokens` supports:
 
