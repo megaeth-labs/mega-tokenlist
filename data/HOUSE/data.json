@@ -1,0 +1,15 @@
+{
+  "name": "HOUSE",
+  "symbol": "HOUSE",
+  "decimals": 18,
+  "description": "Yield-sharing token of the Chisino protocol.",
+  "website": "https://chisino.io",
+  "tokens": {
+    "megaeth": {
+      "address": "0xC1D160c29d7278F02C67Da8bC8e046D759Fe7352",
+      "isOrigin": true,
+      "mechanism": "native",
+      "isOFT": false
+    }
+  }
+}
