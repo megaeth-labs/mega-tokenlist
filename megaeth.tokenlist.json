@@ -261,6 +261,19 @@
     },
     {
       "chainId": 4326,
+      "address": "0xC1D160c29d7278F02C67Da8bC8e046D759Fe7352",
+      "name": "HOUSE",
+      "symbol": "HOUSE",
+      "decimals": 18,
+      "extensions": {
+        "isOrigin": true,
+        "mechanism": "native",
+        "isOFT": false
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/HOUSE/logo.svg"
+    },
+    {
+      "chainId": 4326,
       "address": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
       "name": "Lombard Staked BTC",
       "symbol": "LBTC",
