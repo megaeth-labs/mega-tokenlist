@@ -1,0 +1,14 @@
+{
+  "name": "NX Terminal Token",
+  "symbol": "NXT",
+  "decimals": 18,
+  "description": "Native utility token of NX Terminal: Protocol Wars — a blockchain simulation game on MegaETH featuring PvP corp wars, prediction markets, and 35,000 autonomous developers competing in the AI Protocol Wars.",
+  "website": "https://nxterminal.xyz",
+  "tokens": {
+    "megaeth": {
+      "address": "0x2F55e14F0b2B2118d2026d20Ad2C39EAcBdCAc47",
+      "isOrigin": true,
+      "mechanism": "native"
+    }
+  }
+}
