@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 698.93 698.93">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .02em;
+      }
+
+      .cls-2 {
+        fill: #1d1d1b;
+        font-family: AkiraExpanded-SuperBold, 'Akira Expanded';
+        font-size: 187px;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        fill: #d6d1cd;
+        stroke: #0b0b0b;
+        stroke-miterlimit: 10;
+        stroke-width: 40px;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <circle class="cls-3" cx="349.46" cy="349.46" r="329.46"/>
+  <text class="cls-2" transform="translate(83.12 411.01)"><tspan class="cls-1" x="0" y="0">N</tspan><tspan class="cls-4" x="175.22" y="0">XT</tspan></text>
+</svg>
