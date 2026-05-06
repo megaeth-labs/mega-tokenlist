@@ -3,6 +3,7 @@
   "symbol": "DIRTY",
   "decimals": 18,
   "description": "Game token of Offshore Protocol; earned by committing crimes inside the on-chain idle RPG, burned to purchase businesses that launder money and earn you passive USDM yield every 8 hours. Traded against USDM in the Kumbaya 1% pool.",
+  "website": "https://app.offshoreprotocol.fun",
   "tokens": {
     "megaeth": {
       "address": "0xC2f34f8849a8607FD73E06D6849bDA07C2b7DE38",
