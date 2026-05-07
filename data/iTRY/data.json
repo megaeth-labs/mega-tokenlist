@@ -1,0 +1,20 @@
+{
+  "name": "iTRY",
+  "symbol": "iTRY",
+  "decimals": 18,
+  "tokens": {
+    "ethereum": {
+      "address": "0xb492B4aFD9658093694CF9452D5C272e8230F3B0",
+      "isOrigin": true,
+      "mechanism": "lock",
+      "bridge": "0xa21819cb613c9525e31178812b665933471E5e88",
+      "isOFT": true
+    },
+    "megaeth": {
+      "address": "0x996ce957408804fEC19237D866799d9C7076E48c",
+      "isOrigin": false,
+      "mechanism": "mint",
+      "isOFT": true
+    }
+  }
+}
