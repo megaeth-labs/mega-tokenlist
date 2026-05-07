@@ -1,0 +1,15 @@
+{
+  "name": "Chisino pUSD",
+  "symbol": "pUSD",
+  "decimals": 18,
+  "description": "Yield-bearing wrapper for USDm issued by the Chisino protocol.",
+  "website": "https://chisino.io",
+  "tokens": {
+    "megaeth": {
+      "address": "0x4fd02a1A80923cE1D7E70A8719421431Ea286941",
+      "isOrigin": true,
+      "mechanism": "native",
+      "isOFT": false
+    }
+  }
+}
