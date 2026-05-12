@@ -1,0 +1,20 @@
+{
+  "name": "wiTRY",
+  "symbol": "wiTRY",
+  "decimals": 18,
+  "tokens": {
+    "ethereum": {
+      "address": "0xE346C29b5B60Ef870b9724c57ccfbBc631e47DEE",
+      "isOrigin": true,
+      "mechanism": "lock",
+      "bridge": "0x698b7518711bDe4832fDc19F5262DF705c713006",
+      "isOFT": true
+    },
+    "megaeth": {
+      "address": "0x15B271D9012b5820FC42b1c495B4C1e206547De5",
+      "isOrigin": false,
+      "mechanism": "mint",
+      "isOFT": true
+    }
+  }
+}

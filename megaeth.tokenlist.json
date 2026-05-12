@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-04-24T06:18:55.359Z",
+  "timestamp": "2026-05-07T10:36:50.757Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -51,6 +51,21 @@
         "bridgeType": "others"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ezETH/logo.svg"
+    },
+    {
+      "chainId": 1,
+      "address": "0xb492B4aFD9658093694CF9452D5C272e8230F3B0",
+      "name": "iTRY",
+      "symbol": "iTRY",
+      "decimals": 18,
+      "extensions": {
+        "isOrigin": true,
+        "mechanism": "lock",
+        "isOFT": true,
+        "bridgeAddress": "0xa21819cb613c9525e31178812b665933471E5e88",
+        "bridgeType": "others"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/iTRY/logo.png"
     },
     {
       "chainId": 1,
@@ -170,6 +185,21 @@
     },
     {
       "chainId": 1,
+      "address": "0xE346C29b5B60Ef870b9724c57ccfbBc631e47DEE",
+      "name": "wiTRY",
+      "symbol": "wiTRY",
+      "decimals": 18,
+      "extensions": {
+        "isOrigin": true,
+        "mechanism": "lock",
+        "isOFT": true,
+        "bridgeAddress": "0x698b7518711bDe4832fDc19F5262DF705c713006",
+        "bridgeType": "others"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/wiTRY/logo.png"
+    },
+    {
+      "chainId": 1,
       "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
       "name": "Wrapped liquid staked Ether 2.0",
       "symbol": "wstETH",
@@ -271,6 +301,22 @@
         "isOFT": false
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/HOUSE/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x996ce957408804fEC19237D866799d9C7076E48c",
+      "name": "iTRY",
+      "symbol": "iTRY",
+      "decimals": 18,
+      "extensions": {
+        "isOrigin": false,
+        "mechanism": "mint",
+        "isOFT": true,
+        "originChain": "ethereum",
+        "originBridgeAddress": "0xa21819cb613c9525e31178812b665933471E5e88",
+        "originMechanism": "lock"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/iTRY/logo.png"
     },
     {
       "chainId": 4326,
@@ -477,6 +523,22 @@
         "isOFT": false
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WETH/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x15B271D9012b5820FC42b1c495B4C1e206547De5",
+      "name": "wiTRY",
+      "symbol": "wiTRY",
+      "decimals": 18,
+      "extensions": {
+        "isOrigin": false,
+        "mechanism": "mint",
+        "isOFT": true,
+        "originChain": "ethereum",
+        "originBridgeAddress": "0x698b7518711bDe4832fDc19F5262DF705c713006",
+        "originMechanism": "lock"
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/wiTRY/logo.png"
     },
     {
       "chainId": 4326,
