@@ -9,6 +9,12 @@
       "isOrigin": true,
       "mechanism": "native",
       "isOFT": false
+    },
+    "megaeth_testnet": {
+      "address": "0xc903c68C1d389CEd76fEe0349067a4295828e6c2",
+      "isOrigin": true,
+      "mechanism": "native",
+      "isOFT": false
     }
   }
 }
