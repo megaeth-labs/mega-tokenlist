@@ -15,6 +15,12 @@
       "isOrigin": false,
       "isOFT": true,
       "mechanism": "mint"
+    },
+    "megaeth_testnet": {
+      "address": "0x72d4db19E3AE6f8ed47B5337ab00D69685277cF4",
+      "isOrigin": true,
+      "isOFT": true,
+      "mechanism": "native"
     }
   }
 }
