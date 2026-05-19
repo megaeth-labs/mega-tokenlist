@@ -1,10 +1,24 @@
 {
   "name": "MegaETH Testnet Token List",
-  "timestamp": "2026-05-12T06:44:46.140Z",
+  "timestamp": "2026-05-19T08:22:08.309Z",
   "version": {
     "major": 1,
     "minor": 0,
     "patch": 0
   },
-  "tokens": []
+  "tokens": [
+    {
+      "chainId": 6343,
+      "address": "0x72d4db19E3AE6f8ed47B5337ab00D69685277cF4",
+      "name": "MegaUSD",
+      "symbol": "USDM",
+      "decimals": 18,
+      "extensions": {
+        "isOrigin": true,
+        "mechanism": "native",
+        "isOFT": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDM/logo.png"
+    }
+  ]
 }
