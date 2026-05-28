@@ -29,6 +29,11 @@ const CANONICAL_BRIDGES = new Set([
   '0x0CA3A2FBC3D770b578223FBB6b062fa875a2eE75',
   '0x7f82f57F0Dd546519324392e408b01fcC7D709e8',
 ])
+// Lowercase mirror used for case-insensitive runtime lookups.
+// The original set is kept in EIP-55 checksummed form for documentation purposes.
+const CANONICAL_BRIDGES_LOWER = new Set(
+  Array.from(CANONICAL_BRIDGES).map((a) => a.toLowerCase())
+)
 
 function getLogoExtension(tokenDir: string): string | null {
   const svgPath = path.join(tokenDir, 'logo.svg')
@@ -108,6 +113,44 @@ function inferMechanism(
   return 'unknown'
 }
 
+/**
+ * Compute the next semantic version for a token list by diffing the previous
+ * token set (keyed by chainId+address) against the new one.
+ *
+ * Rules (following Uniswap Token List spec):
+ *   - removed tokens → major bump
+ *   - added tokens   → minor bump
+ *   - only metadata  → patch bump
+ */
+function computeNextVersion(
+  previousVersion: { major: number; minor: number; patch: number },
+  prevTokens: TokenListToken[],
+  currentTokens: TokenListToken[]
+): { major: number; minor: number; patch: number } {
+  const key = (t: TokenListToken) => `${t.chainId}:${t.address.toLowerCase()}`
+  const prevKeys = new Set(prevTokens.map(key))
+  const currKeys = new Set(currentTokens.map(key))
+
+  const removed = [...prevKeys].some((k) => !currKeys.has(k))
+  const added = [...currKeys].some((k) => !prevKeys.has(k))
+
+  if (removed) {
+    return { major: previousVersion.major + 1, minor: 0, patch: 0 }
+  }
+  if (added) {
+    return {
+      major: previousVersion.major,
+      minor: previousVersion.minor + 1,
+      patch: 0,
+    }
+  }
+  return {
+    major: previousVersion.major,
+    minor: previousVersion.minor,
+    patch: previousVersion.patch + 1,
+  }
+}
+
 export function generate(target: TokenListTarget = 'mainnet'): TokenList {
   // Read all token directories
   const tokenDirs = fs
@@ -161,7 +204,9 @@ export function generate(target: TokenListTarget = 'mainnet'): TokenList {
       // Add bridge address for this chain
       if (chainToken.bridge) {
         extensions.bridgeAddress = chainToken.bridge
-        extensions.bridgeType = CANONICAL_BRIDGES.has(chainToken.bridge)
+        extensions.bridgeType = CANONICAL_BRIDGES_LOWER.has(
+          chainToken.bridge.toLowerCase()
+        )
           ? 'canonical'
           : 'others'
       }
@@ -195,17 +240,28 @@ export function generate(target: TokenListTarget = 'mainnet'): TokenList {
     return a.symbol.localeCompare(b.symbol)
   })
 
+  // Compute version by diffing against the previously written output file.
+  const outputFile = OUTPUT_FILES[target]
+  let previousVersion = { major: 1, minor: 0, patch: 0 }
+  let prevTokens: TokenListToken[] = []
+  if (fs.existsSync(outputFile)) {
+    try {
+      const prev = JSON.parse(fs.readFileSync(outputFile, 'utf-8')) as TokenList
+      previousVersion = prev.version
+      prevTokens = prev.tokens
+    } catch {
+      // Corrupt or unreadable previous file — treat as first run.
+    }
+  }
+  const version = computeNextVersion(previousVersion, prevTokens, tokens)
+
   const tokenList: TokenList = {
     name:
       target === 'mainnet'
         ? 'MegaETH Token List'
         : 'MegaETH Testnet Token List',
     timestamp: new Date().toISOString(),
-    version: {
-      major: 1,
-      minor: 0,
-      patch: 0,
-    },
+    version,
     tokens,
   }
 
