@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-05-27T08:14:20.176Z",
+  "timestamp": "2026-06-25T14:36:35.347Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -254,6 +254,19 @@
         "originMechanism": "lock"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/CUSD/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x6691D67Ece85Ed950244c2CB5848d6498134321f",
+      "name": "Dirty Cash",
+      "symbol": "DCASH",
+      "decimals": 18,
+      "extensions": {
+        "isOrigin": true,
+        "mechanism": "native",
+        "isOFT": false
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/DCASH/logo.png"
     },
     {
       "chainId": 4326,
