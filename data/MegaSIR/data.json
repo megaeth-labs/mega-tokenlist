@@ -2,7 +2,7 @@
   "name": "Synthetics Implemented Right",
   "symbol": "MegaSIR",
   "decimals": 12,
-  "verification": { "status": "community", "method": "maintainer-review" },
+  "verification": { "status": "issuer", "method": "source-submission" },
   "description": "Sir Trading is a decentralized derivatives protocol for leveraged crypto trading. It offers constant leverage without liquidations or funding rates, using a one-time fee model. Users can trade, provide liquidity, or stake tokens to earn protocol revenue.",
   "tokens": {
     "megaeth": {
