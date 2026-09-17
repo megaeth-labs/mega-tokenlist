@@ -140,6 +140,13 @@ Each chain entry may include:
 - `bridge`
 - `isOFT`
 
+Each root token record must also include:
+
+- `verification.status` — `issuer`, `community`, or `infrastructure`
+- `verification.method` — `source-submission`, `maintainer-review`, or `official-infrastructure`
+
+Do not claim `issuer` verification without evidence that the issuer or its official organization supplied or approved the relationship. The PR submitter proposes the level; merging is the registry maintainer's attestation.
+
 ### Mechanism meanings
 
 - `native` — originated on this chain

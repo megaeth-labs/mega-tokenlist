@@ -2,6 +2,10 @@
   "name": "Wrapped Ether",
   "symbol": "WETH",
   "decimals": 18,
+  "verification": {
+    "status": "infrastructure",
+    "method": "official-infrastructure"
+  },
   "description": "Wrapped Ether on MegaETH",
   "tokens": {
     "ethereum": {

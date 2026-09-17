@@ -2,6 +2,7 @@
   "name": "Renzo Restaked ETH",
   "symbol": "ezETH",
   "decimals": 18,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "description": "Renzo Restaked ETH on MegaETH",
   "tokens": {
     "ethereum": {

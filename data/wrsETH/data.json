@@ -2,6 +2,7 @@
   "name": "rsETHWrapper",
   "symbol": "wrsETH",
   "decimals": 18,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "description": "Kelp wrsETH on MegaETH",
   "tokens": {
     "megaeth": {

@@ -2,6 +2,7 @@
   "name": "KelpDao Restaked ETH",
   "symbol": "rsETH",
   "decimals": 18,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "description": "Kelp rsETH on MegaETH",
   "tokens": {
     "ethereum": {

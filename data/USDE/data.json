@@ -2,6 +2,7 @@
   "name": "USDe",
   "symbol": "USDe",
   "decimals": 18,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "description": "Ethena USDe on MegaETH",
   "tokens": {
     "ethereum": {

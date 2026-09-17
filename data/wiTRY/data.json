@@ -2,6 +2,7 @@
   "name": "wiTRY",
   "symbol": "wiTRY",
   "decimals": 18,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "tokens": {
     "ethereum": {
       "address": "0xE346C29b5B60Ef870b9724c57ccfbBc631e47DEE",

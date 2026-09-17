@@ -2,6 +2,7 @@
   "name": "pufETH",
   "symbol": "pufETH",
   "decimals": 18,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "description": "Puffer liquid restaking token on MegaETH",
   "website": "https://www.puffer.fi",
   "tokens": {

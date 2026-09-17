@@ -2,6 +2,7 @@
   "name": "Wrapped SOL",
   "symbol": "WSOL",
   "decimals": 9,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "description": "Wrapped SOL bridged from Solana via Wormhole",
   "tokens": {
     "solana": {

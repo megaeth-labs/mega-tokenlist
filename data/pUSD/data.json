@@ -2,6 +2,7 @@
   "name": "Chisino pUSD",
   "symbol": "pUSD",
   "decimals": 18,
+  "verification": { "status": "community", "method": "maintainer-review" },
   "description": "Yield-bearing wrapper for USDm issued by the Chisino protocol.",
   "website": "https://chisino.io",
   "tokens": {

@@ -2,6 +2,7 @@
   "name": "Wrapped Bitcoin",
   "symbol": "WBTC",
   "decimals": 8,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "description": "Wrapped Bitcoin bridged from Ethereum via Wormhole",
   "tokens": {
     "ethereum": {

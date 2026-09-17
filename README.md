@@ -37,13 +37,14 @@ The generated tokenlists follow the [Uniswap Token List](https://github.com/Unis
 
 ### Root Fields
 
-| Field         | Type   | Required | Description                        |
-| ------------- | ------ | -------- | ---------------------------------- |
-| `name`        | string | ✓        | Full token name                    |
-| `symbol`      | string | ✓        | Token ticker symbol                |
-| `decimals`    | number | ✓        | Token decimal places               |
-| `description` | string |          | Token description (max 1000 chars) |
-| `website`     | string |          | Project website URL                |
+| Field          | Type   | Required | Description                        |
+| -------------- | ------ | -------- | ---------------------------------- |
+| `name`         | string | ✓        | Full token name                    |
+| `symbol`       | string | ✓        | Token ticker symbol                |
+| `decimals`     | number | ✓        | Token decimal places               |
+| `verification` | object | ✓        | Registry-approved trust level      |
+| `description`  | string |          | Token description (max 1000 chars) |
+| `website`      | string |          | Project website URL                |
 
 ### Per-Chain Fields
 
@@ -65,6 +66,18 @@ Each chain entry in `tokens` supports:
 | `mechanism` | string  | How tokens move: `"native"` `"lock"` `"mint"` `"burn"`           |
 | `bridge`    | string  | Bridge contract address (lockbox if lock, endpoint if mint/burn) |
 | `isOFT`     | boolean | `true` if token is a LayerZero OFT                               |
+
+### Verification
+
+Every merged token declares the trust level approved by a registry maintainer:
+
+| Status           | Meaning                                                                 | Method                    |
+| ---------------- | ----------------------------------------------------------------------- | ------------------------- |
+| `issuer`         | The token issuer or its official organization supplied the relationship | `source-submission`       |
+| `community`      | A community asset was reviewed and accepted by registry maintainers     | `maintainer-review`       |
+| `infrastructure` | The relationship is part of official MegaETH protocol infrastructure    | `official-infrastructure` |
+
+The submitter proposes this value. Merging the pull request is the maintainer's attestation that the selected level satisfies registry policy. Consumers should use the generated `extensions.sourceChain` and `extensions.sourceAddress` fields for exact relationship matching rather than inferring a relationship from token metadata.
 
 ### Mechanism Types
 

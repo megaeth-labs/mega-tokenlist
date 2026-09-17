@@ -21,6 +21,14 @@
 - [ ] This is a **bridged** token
   - Bridge Address: `0x...`
 
+### Registry Verification
+
+- [ ] **Issuer verified** — submitted or approved by the issuer's official organization
+- [ ] **Community verified** — community asset accepted after maintainer review
+- [ ] **Infrastructure verified** — official MegaETH protocol infrastructure
+- **Method**: `source-submission | maintainer-review | official-infrastructure`
+- **Evidence**: <!-- Link to the official source, discussion, or documentation when applicable -->
+
 ### Checklist
 
 - [ ] Created folder `data/<SYMBOL>/`

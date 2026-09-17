@@ -2,6 +2,7 @@
   "name": "Staked Cap USD",
   "symbol": "STCUSD",
   "decimals": 18,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "description": "Staked Cap Stablecoin on MegaETH",
   "tokens": {
     "ethereum": {

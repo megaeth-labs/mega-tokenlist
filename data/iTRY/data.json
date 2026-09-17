@@ -2,6 +2,7 @@
   "name": "iTRY",
   "symbol": "iTRY",
   "decimals": 18,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "tokens": {
     "ethereum": {
       "address": "0xb492B4aFD9658093694CF9452D5C272e8230F3B0",
