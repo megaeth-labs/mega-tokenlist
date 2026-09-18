@@ -1,5 +1,6 @@
 import * as fs from 'fs'
 import * as path from 'path'
+import { versionTokenList } from './version'
 import {
   CHAIN_IDS,
   SOURCE_CHAINS,
@@ -26,8 +27,8 @@ const LOGO_BASE_URL =
 
 const CANONICAL_BRIDGES = new Set([
   '0x4200000000000000000000000000000000000010',
-  '0x0CA3A2FBC3D770b578223FBB6b062fa875a2eE75',
-  '0x7f82f57F0Dd546519324392e408b01fcC7D709e8',
+  '0x0ca3a2fbc3d770b578223fbb6b062fa875a2ee75',
+  '0x7f82f57f0dd546519324392e408b01fcc7d709e8',
 ])
 
 const VERIFICATION_METHODS = {
@@ -184,7 +185,9 @@ export function generate(target: TokenListTarget = 'mainnet'): TokenList {
       // Add bridge address for this chain
       if (chainToken.bridge) {
         extensions.bridgeAddress = chainToken.bridge
-        extensions.bridgeType = CANONICAL_BRIDGES.has(chainToken.bridge)
+        extensions.bridgeType = CANONICAL_BRIDGES.has(
+          chainToken.bridge.toLowerCase()
+        )
           ? 'canonical'
           : 'others'
       }
@@ -232,7 +235,7 @@ export function generate(target: TokenListTarget = 'mainnet'): TokenList {
     tokens,
   }
 
-  return tokenList
+  return versionTokenList(tokenList, OUTPUT_FILES[target])
 }
 
 // Main execution

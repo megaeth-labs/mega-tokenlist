@@ -401,7 +401,7 @@ Total Supply = Ethereum Circulating + Ethereum Locked
 
 ### Prerequisites
 
-- Node.js >= 18
+- Node.js >= 20
 - pnpm
 
 ### Setup

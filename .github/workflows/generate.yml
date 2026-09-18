@@ -5,6 +5,13 @@ on:
     branches: [main]
     paths:
       - 'data/**'
+      - 'src/**'
+      - '.github/workflows/generate.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: generate-token-list
+  cancel-in-progress: false
 
 jobs:
   generate:
@@ -14,6 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           token: ${{ secrets.TOKENLIST_SECRET }}
 
       - uses: actions/setup-node@v4
@@ -22,7 +30,7 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Format files
         run: npm run format
