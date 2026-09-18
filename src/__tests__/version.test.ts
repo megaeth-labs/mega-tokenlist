@@ -10,7 +10,12 @@ const token: TokenListToken = {
   name: 'Token',
   symbol: 'TOK',
   decimals: 18,
-  extensions: { isOrigin: true, mechanism: 'native', isOFT: false },
+  extensions: {
+    isOrigin: true,
+    mechanism: 'native',
+    isOFT: false,
+    verification: { status: 'issuer', method: 'source-submission' },
+  },
 }
 const previous: TokenList = {
   name: 'List',
@@ -60,12 +65,33 @@ test('token and object property order do not create updates', () => {
         second,
         {
           ...token,
-          extensions: { isOFT: false, mechanism: 'native', isOrigin: true },
+          extensions: {
+            verification: {
+              method: 'source-submission',
+              status: 'issuer',
+            },
+            isOFT: false,
+            mechanism: 'native',
+            isOrigin: true,
+          },
         },
       ]),
       output
     ).version
   ).toEqual(previous.version)
+})
+test('adding verification to existing tokens is a metadata update', () => {
+  const { verification, ...extensions } = token.extensions
+  fs.writeFileSync(
+    output,
+    JSON.stringify({ ...previous, tokens: [{ ...token, extensions }] })
+  )
+
+  const result = versionTokenList(current(), output)
+  expect(result.version).toEqual({ major: 2, minor: 3, patch: 5 })
+  expect(result.tokens[0].extensions.verification).toEqual(verification)
+  fs.writeFileSync(output, JSON.stringify(result))
+  expect(versionTokenList(current(), output)).toEqual(result)
 })
 test.each([
   [

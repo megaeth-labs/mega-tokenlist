@@ -51,28 +51,38 @@ describe('Token List Generation', () => {
   })
 
   test('version has correct structure', () => {
-    expect(tokenList.version).toEqual({ major: 1, minor: 1, patch: 0 });
-  });
+    for (const list of [tokenList, testnetTokenList]) {
+      expect(list.version).toEqual({
+        major: expect.any(Number),
+        minor: expect.any(Number),
+        patch: expect.any(Number),
+      })
+      for (const part of Object.values(list.version)) {
+        expect(Number.isSafeInteger(part)).toBe(true)
+        expect(part).toBeGreaterThanOrEqual(0)
+      }
+    }
+  })
 
   test('tokens have required fields', () => {
     for (const token of tokenList.tokens) {
-      expect(token).toHaveProperty('chainId');
-      expect(token).toHaveProperty('address');
-      expect(token).toHaveProperty('name');
-      expect(token).toHaveProperty('symbol');
-      expect(token).toHaveProperty('decimals');
-      expect(token).toHaveProperty('extensions');
-      expect(token.extensions).toHaveProperty('verification');
+      expect(token).toHaveProperty('chainId')
+      expect(token).toHaveProperty('address')
+      expect(token).toHaveProperty('name')
+      expect(token).toHaveProperty('symbol')
+      expect(token).toHaveProperty('decimals')
+      expect(token).toHaveProperty('extensions')
+      expect(token.extensions).toHaveProperty('verification')
       expect(['issuer', 'community', 'infrastructure']).toContain(
         token.extensions.verification.status
-      );
+      )
       expect(
         {
           issuer: 'source-submission',
           community: 'maintainer-review',
           infrastructure: 'official-infrastructure',
         }[token.extensions.verification.status]
-      ).toBe(token.extensions.verification.method);
+      ).toBe(token.extensions.verification.method)
     }
   })
 
@@ -124,17 +134,17 @@ describe('Token List Generation', () => {
   test('cross-chain entries include an explicit source relationship', () => {
     const wsteth = tokenList.tokens.find(
       (token) => token.chainId === 4326 && token.symbol === 'wstETH'
-    );
+    )
 
-    expect(wsteth?.extensions.sourceChain).toBe('ethereum');
+    expect(wsteth?.extensions.sourceChain).toBe('ethereum')
     expect(wsteth?.extensions.sourceAddress).toBe(
       '0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0'
-    );
+    )
     expect(wsteth?.extensions.verification).toEqual({
       status: 'issuer',
       method: 'source-submission',
-    });
-  });
+    })
+  })
 
   test('mainnet token list excludes testnet chain ids', () => {
     expect(tokenList.tokens.every((t) => t.chainId !== 6343)).toBe(true)
