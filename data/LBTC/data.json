@@ -2,6 +2,7 @@
   "name": "Lombard Staked BTC",
   "symbol": "LBTC",
   "decimals": 8,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "tokens": {
     "megaeth": {
       "address": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",

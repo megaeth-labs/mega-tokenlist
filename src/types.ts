@@ -3,6 +3,18 @@ import type { Chain } from './chains'
 // Bridge/token mechanism types
 export type Mechanism = 'native' | 'lock' | 'mint' | 'burn'
 
+// Registry verification records what maintainers attested when merging an entry.
+export type VerificationStatus = 'issuer' | 'community' | 'infrastructure'
+export type VerificationMethod =
+  | 'source-submission'
+  | 'maintainer-review'
+  | 'official-infrastructure'
+
+export interface Verification {
+  status: VerificationStatus
+  method: VerificationMethod
+}
+
 // Token address on a specific chain
 export interface Token {
   address: string
@@ -20,6 +32,7 @@ export interface TokenData {
   name: string
   symbol: string
   decimals: number
+  verification: Verification
   description?: string
   website?: string
   tokens: Partial<Record<Chain, Token>>
@@ -43,6 +56,8 @@ export interface TokenExtensions {
   // Source chain for non-EVM bridged tokens
   sourceChain?: string // e.g., "solana"
   sourceAddress?: string // Address on source chain
+  // Registry trust level approved by a maintainer
+  verification: Verification
 }
 
 // Uniswap TokenList standard types

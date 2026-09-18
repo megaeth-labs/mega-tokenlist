@@ -31,6 +31,12 @@ const CANONICAL_BRIDGES = new Set([
   '0x7f82f57f0dd546519324392e408b01fcc7d709e8',
 ])
 
+const VERIFICATION_METHODS = {
+  issuer: 'source-submission',
+  community: 'maintainer-review',
+  infrastructure: 'official-infrastructure',
+} as const
+
 function getLogoExtension(tokenDir: string): string | null {
   const svgPath = path.join(tokenDir, 'logo.svg')
   const pngPath = path.join(tokenDir, 'logo.png')
@@ -46,9 +52,20 @@ function readTokenData(symbol: string): TokenData {
   return JSON.parse(content) as TokenData
 }
 
+function validateVerification(tokenData: TokenData): void {
+  const verification = tokenData.verification
+  const expected = verification && VERIFICATION_METHODS[verification.status]
+  if (!expected || verification.method !== expected) {
+    throw new Error(
+      `${tokenData.symbol} has an invalid registry verification status or method`
+    )
+  }
+}
+
 // Find the origin chain info (chain name, bridge address, mechanism)
 function findOriginInfo(tokenData: TokenData): {
   chain: string
+  address: string
   bridge?: string
   mechanism?: Mechanism
 } | null {
@@ -57,6 +74,7 @@ function findOriginInfo(tokenData: TokenData): {
     if (chainToken?.isOrigin === true) {
       return {
         chain,
+        address: chainToken.address,
         bridge: chainToken.bridge,
         mechanism: chainToken.mechanism,
       }
@@ -67,6 +85,7 @@ function findOriginInfo(tokenData: TokenData): {
     if (SOURCE_CHAINS.includes(chain as SourceChain) && chainToken?.address) {
       return {
         chain,
+        address: chainToken.address,
         bridge: undefined,
         mechanism: undefined,
       }
@@ -125,6 +144,7 @@ export function generate(target: TokenListTarget = 'mainnet'): TokenList {
   for (const symbol of tokenDirs) {
     const tokenDir = path.join(DATA_DIR, symbol)
     const tokenData = readTokenData(symbol)
+    validateVerification(tokenData)
     const logoExt = getLogoExtension(tokenDir)
     const sourceChain = findSourceChain(tokenData)
     const originInfo = findOriginInfo(tokenData)
@@ -145,11 +165,14 @@ export function generate(target: TokenListTarget = 'mainnet'): TokenList {
         isOrigin: chainToken.isOrigin ?? 'unknown',
         mechanism,
         isOFT: chainToken.isOFT ?? 'unknown',
+        verification: tokenData.verification,
       }
 
       // Add origin chain info for non-origin tokens
       if (!isOrigin && originInfo) {
         extensions.originChain = originInfo.chain
+        extensions.sourceChain = originInfo.chain
+        extensions.sourceAddress = originInfo.address
         // Include origin bridge info so trackers know where backing is
         if (originInfo.bridge) {
           extensions.originBridgeAddress = originInfo.bridge
@@ -170,7 +193,7 @@ export function generate(target: TokenListTarget = 'mainnet'): TokenList {
       }
 
       // Add source chain info if bridged from non-EVM chain
-      if (sourceChain) {
+      if (sourceChain && !extensions.sourceAddress) {
         extensions.sourceChain = sourceChain.chain
         extensions.sourceAddress = sourceChain.address
       }

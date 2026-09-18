@@ -2,6 +2,7 @@
   "name": "Wrapped liquid staked Ether 2.0",
   "symbol": "wstETH",
   "decimals": 18,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "description": "Wrapped liquid staked Ether 2.0",
   "website": "https://lido.fi",
   "tokens": {

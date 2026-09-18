@@ -2,6 +2,7 @@
   "name": "USDT0",
   "symbol": "USDT0",
   "decimals": 6,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "description": "Tether Stablecoin on MegaETH",
   "tokens": {
     "megaeth": {

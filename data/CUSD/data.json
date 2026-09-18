@@ -2,6 +2,7 @@
   "name": "Cap USD",
   "symbol": "CUSD",
   "decimals": 18,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "description": "Cap Stablecoin on MegaETH",
   "tokens": {
     "ethereum": {

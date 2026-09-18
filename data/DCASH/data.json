@@ -2,6 +2,7 @@
   "name": "Dirty Cash",
   "symbol": "DCASH",
   "decimals": 18,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "description": "Game token of Offshore Protocol; earned by committing crimes inside the on-chain idle RPG, burned to purchase businesses that launder money and earn you passive USDM yield every 8 hours. Traded against USDM in the Kumbaya 1% pool.",
   "website": "https://app.offshoreprotocol.fun",
   "tokens": {

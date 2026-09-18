@@ -2,6 +2,7 @@
   "name": "MegaUSD",
   "symbol": "USDM",
   "decimals": 18,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "description": "Native stablecoin of MegaETH",
   "tokens": {
     "ethereum": {

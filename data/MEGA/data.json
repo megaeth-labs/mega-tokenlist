@@ -2,6 +2,10 @@
   "name": "MEGA",
   "symbol": "MEGA",
   "decimals": 18,
+  "verification": {
+    "status": "infrastructure",
+    "method": "official-infrastructure"
+  },
   "description": "Ecosystem token of MegaETH",
   "tokens": {
     "megaeth": {

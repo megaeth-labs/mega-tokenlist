@@ -2,6 +2,7 @@
   "name": "HOUSE",
   "symbol": "HOUSE",
   "decimals": 18,
+  "verification": { "status": "issuer", "method": "source-submission" },
   "description": "Yield-sharing token of the Chisino protocol.",
   "website": "https://chisino.io",
   "tokens": {
