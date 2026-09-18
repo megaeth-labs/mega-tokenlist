@@ -1,10 +1,10 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-06-25T14:36:35.347Z",
+  "timestamp": "2026-09-18T15:18:37.040Z",
   "version": {
     "major": 1,
     "minor": 0,
-    "patch": 0
+    "patch": 1
   },
   "tokens": [
     {
@@ -17,6 +17,10 @@
         "isOrigin": true,
         "mechanism": "lock",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "bridgeAddress": "0xA62571EbdFfAbC3051a2e5B9e1f57b23D830c8Fd",
         "bridgeType": "others"
       },
@@ -32,8 +36,12 @@
         "isOrigin": true,
         "mechanism": "lock",
         "isOFT": false,
+        "verification": {
+          "status": "infrastructure",
+          "method": "official-infrastructure"
+        },
         "bridgeAddress": "0x7f82f57f0dd546519324392e408b01fcc7d709e8",
-        "bridgeType": "others"
+        "bridgeType": "canonical"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ETH/logo.svg"
     },
@@ -47,6 +55,10 @@
         "isOrigin": true,
         "mechanism": "lock",
         "isOFT": false,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "bridgeAddress": "0xC8140dA31E6bCa19b287cC35531c2212763C2059",
         "bridgeType": "others"
       },
@@ -62,6 +74,10 @@
         "isOrigin": true,
         "mechanism": "lock",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "bridgeAddress": "0xa21819cb613c9525e31178812b665933471E5e88",
         "bridgeType": "others"
       },
@@ -77,6 +93,10 @@
         "isOrigin": true,
         "mechanism": "lock",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "bridgeAddress": "0xa4931a9F9Aaf79057334371D6f62164743f97b18",
         "bridgeType": "others"
       },
@@ -92,6 +112,10 @@
         "isOrigin": true,
         "mechanism": "lock",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "bridgeAddress": "0x85d456B2DfF1fd8245387C0BfB64Dfb700e98Ef3",
         "bridgeType": "others"
       },
@@ -107,6 +131,10 @@
         "isOrigin": true,
         "mechanism": "lock",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "bridgeAddress": "0x983AEAaA0d0426839158435C43725EA7F45d4137",
         "bridgeType": "others"
       },
@@ -122,6 +150,10 @@
         "isOrigin": true,
         "mechanism": "lock",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "bridgeAddress": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
         "bridgeType": "others"
       },
@@ -137,6 +169,10 @@
         "isOrigin": true,
         "mechanism": "lock",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "bridgeAddress": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
         "bridgeType": "others"
       },
@@ -151,7 +187,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": true
+        "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDM/logo.png"
     },
@@ -165,6 +205,10 @@
         "isOrigin": true,
         "mechanism": "lock",
         "isOFT": "unknown",
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "bridgeAddress": "0x3ee18B2214AFF97000D974cf647E7C347E8fa585",
         "bridgeType": "others"
       },
@@ -179,7 +223,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": false
+        "isOFT": false,
+        "verification": {
+          "status": "infrastructure",
+          "method": "official-infrastructure"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WETH/logo.svg"
     },
@@ -193,6 +241,10 @@
         "isOrigin": true,
         "mechanism": "lock",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "bridgeAddress": "0x698b7518711bDe4832fDc19F5262DF705c713006",
         "bridgeType": "others"
       },
@@ -207,7 +259,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": false
+        "isOFT": false,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/wstETH/logo.svg"
     },
@@ -221,6 +277,10 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": false,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "bridgeAddress": "0xfa546248C54939AA6C48279CdC1EAf9A1125c411",
         "bridgeType": "others"
       },
@@ -235,7 +295,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": false
+        "isOFT": false,
+        "verification": {
+          "status": "community",
+          "method": "maintainer-review"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/CROWN/logo.png"
     },
@@ -249,7 +313,13 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "originChain": "ethereum",
+        "sourceChain": "ethereum",
+        "sourceAddress": "0xcCcc62962d17b8914c62D74FfB843d73B2a3cccC",
         "originBridgeAddress": "0xA62571EbdFfAbC3051a2e5B9e1f57b23D830c8Fd",
         "originMechanism": "lock"
       },
@@ -264,7 +334,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": false
+        "isOFT": false,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/DCASH/logo.png"
     },
@@ -277,7 +351,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": false
+        "isOFT": false,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/DIRTY/logo.png"
     },
@@ -291,7 +369,13 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": false,
+        "verification": {
+          "status": "infrastructure",
+          "method": "official-infrastructure"
+        },
         "originChain": "ethereum",
+        "sourceChain": "ethereum",
+        "sourceAddress": "0x0000000000000000000000000000000000000000",
         "originBridgeAddress": "0x7f82f57f0dd546519324392e408b01fcc7d709e8",
         "originMechanism": "lock",
         "bridgeAddress": "0x4200000000000000000000000000000000000010",
@@ -309,7 +393,13 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": false,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "originChain": "ethereum",
+        "sourceChain": "ethereum",
+        "sourceAddress": "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
         "originBridgeAddress": "0xC8140dA31E6bCa19b287cC35531c2212763C2059",
         "originMechanism": "lock"
       },
@@ -324,7 +414,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": false
+        "isOFT": false,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/HOUSE/logo.svg"
     },
@@ -338,7 +432,13 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "originChain": "ethereum",
+        "sourceChain": "ethereum",
+        "sourceAddress": "0xb492B4aFD9658093694CF9452D5C272e8230F3B0",
         "originBridgeAddress": "0xa21819cb613c9525e31178812b665933471E5e88",
         "originMechanism": "lock"
       },
@@ -354,6 +454,10 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": false,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "bridgeAddress": "0xfa546248C54939AA6C48279CdC1EAf9A1125c411",
         "bridgeType": "others"
       },
@@ -368,7 +472,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": false
+        "isOFT": false,
+        "verification": {
+          "status": "infrastructure",
+          "method": "official-infrastructure"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/MEGA/logo.svg"
     },
@@ -381,7 +489,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": "unknown"
+        "isOFT": "unknown",
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/MegaSIR/logo.svg"
     },
@@ -394,7 +506,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": "unknown"
+        "isOFT": "unknown",
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/NXT/logo.svg"
     },
@@ -408,7 +524,13 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "originChain": "ethereum",
+        "sourceChain": "ethereum",
+        "sourceAddress": "0xD9A442856C234a39a81a089C06451EBAa4306a72",
         "originBridgeAddress": "0xa4931a9F9Aaf79057334371D6f62164743f97b18",
         "originMechanism": "lock"
       },
@@ -423,7 +545,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": false
+        "isOFT": false,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/pUSD/logo.svg"
     },
@@ -437,7 +563,13 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "originChain": "ethereum",
+        "sourceChain": "ethereum",
+        "sourceAddress": "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
         "originBridgeAddress": "0x85d456B2DfF1fd8245387C0BfB64Dfb700e98Ef3",
         "originMechanism": "lock"
       },
@@ -453,7 +585,13 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "originChain": "ethereum",
+        "sourceChain": "ethereum",
+        "sourceAddress": "0x88887bE419578051FF9F4eb6C858A951921D8888",
         "originBridgeAddress": "0x983AEAaA0d0426839158435C43725EA7F45d4137",
         "originMechanism": "lock"
       },
@@ -469,7 +607,13 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "originChain": "ethereum",
+        "sourceChain": "ethereum",
+        "sourceAddress": "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
         "originBridgeAddress": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
         "originMechanism": "lock"
       },
@@ -485,7 +629,13 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "originChain": "ethereum",
+        "sourceChain": "ethereum",
+        "sourceAddress": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
         "originBridgeAddress": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
         "originMechanism": "lock"
       },
@@ -501,7 +651,13 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "originChain": "ethereum",
+        "sourceChain": "ethereum",
+        "sourceAddress": "0xEc2AF1C8B110a61fD9C3Fa6a554a031Ca9943926",
         "originMechanism": "native"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDM/logo.png"
@@ -515,7 +671,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": "unknown"
+        "isOFT": "unknown",
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDmY/logo.svg"
     },
@@ -528,7 +688,11 @@
       "extensions": {
         "isOrigin": false,
         "mechanism": "mint",
-        "isOFT": true
+        "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDT0/logo.png"
     },
@@ -542,7 +706,13 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": "unknown",
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "originChain": "ethereum",
+        "sourceChain": "ethereum",
+        "sourceAddress": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
         "originBridgeAddress": "0x3ee18B2214AFF97000D974cf647E7C347E8fa585",
         "originMechanism": "lock",
         "bridgeAddress": "0xF97B81E513f53c7a6B57Bd0b103a6c295b3096C5",
@@ -559,7 +729,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": false
+        "isOFT": false,
+        "verification": {
+          "status": "infrastructure",
+          "method": "official-infrastructure"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WETH/logo.svg"
     },
@@ -573,7 +747,13 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "originChain": "ethereum",
+        "sourceChain": "ethereum",
+        "sourceAddress": "0xE346C29b5B60Ef870b9724c57ccfbBc631e47DEE",
         "originBridgeAddress": "0x698b7518711bDe4832fDc19F5262DF705c713006",
         "originMechanism": "lock"
       },
@@ -588,7 +768,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": "unknown"
+        "isOFT": "unknown",
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/wrsETH/logo.svg"
     },
@@ -602,13 +786,17 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": "unknown",
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "originChain": "solana",
+        "sourceChain": "solana",
+        "sourceAddress": "So11111111111111111111111111111111111111112",
         "originBridgeAddress": "wormDTUJ6AWPNvk59vGQbDvGJmqbDTdgWgAqcLBCgUb",
         "originMechanism": "lock",
         "bridgeAddress": "0xF97B81E513f53c7a6B57Bd0b103a6c295b3096C5",
-        "bridgeType": "others",
-        "sourceChain": "solana",
-        "sourceAddress": "So11111111111111111111111111111111111111112"
+        "bridgeType": "others"
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/WSOL/logo.svg"
     },
@@ -622,7 +810,13 @@
         "isOrigin": false,
         "mechanism": "mint",
         "isOFT": false,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        },
         "originChain": "ethereum",
+        "sourceChain": "ethereum",
+        "sourceAddress": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
         "originMechanism": "native",
         "bridgeAddress": "0x1ba9bE96A5c21dcdB9D22bEC3f00abCb6336fd65",
         "bridgeType": "others"

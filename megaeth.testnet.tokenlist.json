@@ -1,10 +1,10 @@
 {
   "name": "MegaETH Testnet Token List",
-  "timestamp": "2026-06-25T14:36:35.350Z",
+  "timestamp": "2026-09-18T15:18:37.043Z",
   "version": {
     "major": 1,
     "minor": 0,
-    "patch": 0
+    "patch": 1
   },
   "tokens": [
     {
@@ -16,7 +16,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": false
+        "isOFT": false,
+        "verification": {
+          "status": "infrastructure",
+          "method": "official-infrastructure"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/MEGA/logo.svg"
     },
@@ -29,7 +33,11 @@
       "extensions": {
         "isOrigin": true,
         "mechanism": "native",
-        "isOFT": true
+        "isOFT": true,
+        "verification": {
+          "status": "issuer",
+          "method": "source-submission"
+        }
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/USDM/logo.png"
     }
