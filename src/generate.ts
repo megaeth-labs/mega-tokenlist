@@ -229,7 +229,7 @@ export function generate(target: TokenListTarget = 'mainnet'): TokenList {
     timestamp: new Date().toISOString(),
     version: {
       major: 1,
-      minor: 1,
+      minor: 0,
       patch: 0,
     },
     tokens,
