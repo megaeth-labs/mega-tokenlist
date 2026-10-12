@@ -16,6 +16,8 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    # TOKENLIST_SECRET lives in this environment, which only main may use.
+    environment: publish
     permissions:
       contents: write
     steps:
