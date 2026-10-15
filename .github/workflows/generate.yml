@@ -17,16 +17,27 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
     steps:
+      # Requires the mega-putin installation and an Always allow bypass on main.
+      - name: Create token for mega-putin
+        id: app-token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ vars.MEGA_PUTIN_CLIENT_ID }}
+          private-key: ${{ secrets.MEGA_PUTIN_PK }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ github.event.repository.name }}
+          permission-contents: write
+
       - uses: actions/checkout@v4
         with:
           ref: main
-          token: ${{ secrets.TOKENLIST_SECRET }}
+          token: ${{ steps.app-token.outputs.token }}
+          persist-credentials: true
 
       - uses: actions/setup-node@v4
         with:
-          token: ${{ secrets.TOKENLIST_SECRET }}
           node-version: '20'
 
       - name: Install dependencies
@@ -41,6 +52,8 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          token: ${{ secrets.TOKENLIST_SECRET }}
           commit_message: 'bot(ci): regenerate token list'
+          commit_user_name: 'mega-putin[bot]'
+          commit_user_email: '265285328+mega-putin[bot]@users.noreply.github.com'
+          commit_author: 'mega-putin[bot] <265285328+mega-putin[bot]@users.noreply.github.com>'
           file_pattern: '*.json data/**'
